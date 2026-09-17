@@ -1,22 +1,15 @@
 # StintikHub
 
-Личный хаб / портфолио интернет-профиля **Stintik**.
+Одна длинная страница-портфолио: скролл вверх/вниз, кнопки открывают ссылки и спойлеры (`<details>`).
 
-## Локально
+## Pages
 
-Открой `index.html` в браузере или подними любой static server.
+Settings → Pages → branch `main` → folder `/`.
 
-## GitHub Pages
+`https://stintik-123.github.io/StintikHub/`
 
-Settings → Pages → Source: Deploy from branch → `main` / root (`/`).
+## Файлы
 
-Сайт будет примерно тут: `https://stintik-123.github.io/StintikHub/`
-
-## Что внутри (черновик)
-
-- Главная, о себе, проекты (StintikVPN)
-- Reddit (ru_gamer, RuAsska)
-- Telegram, GitHub, ссылки, контакты
-- Навигация кнопками
-
-Текст и ссылки можно править прямо в `index.html`.
+- `index.html` — весь контент
+- `style.css` — оформление
+- `script.js` — пока пустой (не нужен для кнопок/спойлеров)
