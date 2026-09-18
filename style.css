@@ -114,7 +114,6 @@ main {
   padding: 2rem 1.25rem 4rem;
 }
 
-/* reveal */
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -397,7 +396,6 @@ h3 {
 
 .link-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax( ste min(100%, 200px), 1fr));
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 0.5rem;
   margin-top: 0.75rem;
