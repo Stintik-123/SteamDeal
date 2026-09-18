@@ -4,235 +4,257 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Stintik — hub</title>
-<meta name="description" content="Stintik — VPN, Reddit, проекты. Личный хаб."/>
-<meta name="theme-color" content="#0a0a0c"/>
+<meta name="description" content="Stintik: StintikVPN, Reddit, open-source. Агрегатор бесплатных VPN, новости игр, модерация."/>
+<meta name="theme-color" content="#07070a"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<div class="bg" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+<div class="glow glow-a" aria-hidden="true"></div>
+<div class="glow glow-b" aria-hidden="true"></div>
 
-<header class="top">
-  <div class="brand">
-    <span class="logo">S</span>
-    <div>
-      <strong>Stintik</strong>
-      <span class="muted">hub / portfolio</span>
-    </div>
-  </div>
-  <nav class="top-nav">
+<header class="header">
+  <a class="logo" href="#top">
+    <span class="logo-mark">S</span>
+    <span class="logo-text">Stintik</span>
+  </a>
+  <nav class="nav">
     <a href="#about">О себе</a>
     <a href="#projects">Проекты</a>
     <a href="#reddit">Reddit</a>
     <a href="#links">Ссылки</a>
-    <a href="#contact">Контакты</a>
+    <a href="#contact">Контакт</a>
   </nav>
 </header>
 
-<article class="page">
+<main id="top">
 
   <!-- HERO -->
-  <section class="block hero" id="top">
-    <p class="eyebrow">internet profile</p>
+  <section class="hero reveal">
+    <div class="avatar-wrap">
+      <div class="avatar" aria-hidden="true">S</div>
+      <span class="avatar-ring"></span>
+    </div>
+    <p class="eyebrow">internet profile · 2026</p>
     <h1>Stintik</h1>
-    <p class="lead">Сборки VPN, реддит, пет-проекты. Не просто пользователь — делаю штуки и выкладываю.</p>
+    <p class="tagline">Собираю бесплатные VPN, пишу игровые новости на Reddit, модерирую. Не стример Stintik с Twitch — другой человек.</p>
     <div class="btn-row">
-      <a class="btn" href="https://stintik-123.github.io/StintikVPN/" target="_blank" rel="noopener">StintikVPN</a>
+      <a class="btn btn-primary" href="https://stintik-123.github.io/StintikVPN/" target="_blank" rel="noopener">StintikVPN →</a>
       <a class="btn" href="https://github.com/Stintik-123" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="https://www.reddit.com/user/Stintik_Official" target="_blank" rel="noopener">Reddit</a>
       <a class="btn" href="https://t.me/StintikVPN" target="_blank" rel="noopener">Telegram</a>
     </div>
-    <div class="stat-row">
-      <div class="stat"><span class="stat-n">VPN</span><span class="stat-l">агрегатор подписок</span></div>
-      <div class="stat"><span class="stat-n">Reddit</span><span class="stat-l">новости + мод</span></div>
-      <div class="stat"><span class="stat-n">Open</span><span class="stat-l">репы на GitHub</span></div>
+    <div class="pills">
+      <span class="pill">u/Stintik_Official</span>
+      <span class="pill">@Stintik-123</span>
+      <span class="pill">@StintikVPN</span>
+    </div>
+  </section>
+
+  <!-- STATS strip -->
+  <section class="stats reveal">
+    <div class="stat">
+      <strong data-count="120">0</strong>
+      <span>★ GitHub · StintikVPN</span>
+    </div>
+    <div class="stat">
+      <strong>~500</strong>
+      <span>подписчиков TG</span>
+    </div>
+    <div class="stat">
+      <strong>4</strong>
+      <span>языка README</span>
+    </div>
+    <div class="stat">
+      <strong>mod</strong>
+      <span>r/RuAsska</span>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="block" id="about">
+  <section class="section reveal" id="about">
     <p class="eyebrow">about</p>
-    <h2>Кто я в интернете</h2>
-    <p>Ники: <strong>Stintik</strong>, <strong>Stintik_Official</strong>, <strong>Stintik-123</strong>.</p>
-    <p>Делаю бесплатные штуки вокруг доступа в интернет и комьюнити: агрегатор VPN-подписок, посты с игровыми новостями, модерация на реддите.</p>
-    <p>Люблю когда можно самому собрать, выложить и чтобы людям было удобно — без пафоса.</p>
-
+    <h2>Кто я в сети</h2>
+    <div class="prose">
+      <p>Делаю штуки, которыми сам бы пользовался: агрегатор рабочих бесплатных VPN-подписок, посты с игровыми новостями, модерация без безделья.</p>
+      <p>StintikVPN появился, потому что бесило искать живые конфиги по кускам. Выложил на Reddit — зашло. Дальше сайт, зеркала, бот, прокси, гайды по обходу.</p>
+      <p>На <strong>r/ru_gamer</strong> — новости и события. В <strong>r/RuAsska</strong> — модератор. Ник везде один и тот же: Stintik / Stintik_Official / Stintik-123.</p>
+    </div>
     <div class="btn-row">
-      <a class="btn btn-ghost" href="#projects">К проектам ↓</a>
-      <a class="btn btn-ghost" href="#now">Чем занят ↓</a>
+      <a class="btn" href="#projects">К проектам ↓</a>
+      <a class="btn" href="#now">Сейчас ↓</a>
     </div>
 
     <details class="fold">
-      <summary>Ещё чуть подробнее</summary>
+      <summary>Откуда люди обычно приходят</summary>
       <div class="fold-body">
-        <p>В интернете в основном через проекты и реддит. StintikVPN — сборник рабочих бесплатных подписок и прокси. На r/ru_gamer пишу игровые новости, в r/RuAsska — модератор.</p>
-        <p>Текст здесь черновой: потом можно переписать своими словами.</p>
+        <p class="muted-sm">Не опрос с бэкендом — просто быстрые кнопки, чтобы прыгнуть туда, откуда ты мог прийти.</p>
+        <div class="btn-row">
+          <a class="btn btn-sm" href="#projects">С Reddit / VPN</a>
+          <a class="btn btn-sm" href="#reddit">С Reddit-постов</a>
+          <a class="btn btn-sm" href="#telegram">С Telegram</a>
+          <a class="btn btn-sm" href="#links">Просто ссылки</a>
+        </div>
       </div>
     </details>
   </section>
 
   <!-- PROJECTS -->
-  <section class="block" id="projects">
+  <section class="section reveal" id="projects">
     <p class="eyebrow">projects</p>
     <h2>Проекты</h2>
-    <p class="sub">Кнопки открывают сайт, репу или канал.</p>
 
-    <div class="card">
-      <h3>StintikVPN</h3>
-      <p>Агрегатор бесплатных VPN-подписок, Telegram-прокси, обход DPI. README, сайт на Pages, зеркала.</p>
+    <article class="card card-featured">
+      <div class="card-top">
+        <h3>StintikVPN</h3>
+        <span class="badge">main</span>
+      </div>
+      <p>Сборник бесплатных VPN-подписок: чёрные/белые списки, MTProto-прокси, клиенты, гайды (zapret, ByeDPI, tgwsproxy). Сайт + README на 4 языках + зеркала.</p>
       <div class="btn-row">
-        <a class="btn" href="https://stintik-123.github.io/StintikVPN/" target="_blank" rel="noopener">Сайт</a>
+        <a class="btn btn-primary" href="https://stintik-123.github.io/StintikVPN/" target="_blank" rel="noopener">Сайт</a>
         <a class="btn" href="https://github.com/Stintik-123/StintikVPN" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="https://t.me/StintikVPN" target="_blank" rel="noopener">Telegram</a>
-        <a class="btn btn-ghost" href="https://gitlab.com/Stintik-123/StintikVPN" target="_blank" rel="noopener">GitLab</a>
-        <a class="btn btn-ghost" href="https://codeberg.org/Stintik-123/StintikVPN" target="_blank" rel="noopener">Codeberg</a>
+        <a class="btn" href="https://t.me/StintikVPN" target="_blank" rel="noopener">Канал</a>
+        <a class="btn" href="https://t.me/StintikVPN_bot" target="_blank" rel="noopener">Бот</a>
       </div>
       <details class="fold">
-        <summary>Что внутри проекта</summary>
+        <summary>Зеркала и детали</summary>
         <div class="fold-body">
-          <p>Чёрные/белые списки подписок, MTProto-прокси, гайды по zapret/ByeDPI, клиенты (Hiddify, Happ и др.), FAQ.</p>
           <div class="btn-row">
-            <a class="btn btn-sm" href="https://github.com/Stintik-123/StintikVPN/blob/main/README.md" target="_blank" rel="noopener">README</a>
-            <a class="btn btn-sm" href="https://stintik-123.github.io/StintikVPN/" target="_blank" rel="noopener">Открыть сайт</a>
+            <a class="btn btn-sm" href="https://gitlab.com/Stintik-123/StintikVPN" target="_blank" rel="noopener">GitLab</a>
+            <a class="btn btn-sm" href="https://codeberg.org/Stintik-123/StintikVPN" target="_blank" rel="noopener">Codeberg</a>
+            <a class="btn btn-sm" href="https://github.com/Stintik-123/StintikVPN/blob/main/README.md" target="_blank" rel="noopener">README RU</a>
+            <a class="btn btn-sm" href="https://github.com/Stintik-123/StintikVPN/blob/main/ReadMe_EN.md" target="_blank" rel="noopener">README EN</a>
           </div>
+          <p class="muted-sm">Агрегатор чужих бесплатных подписок + свои подборки прокси и обходов. Не свой VPN-сервер.</p>
         </div>
       </details>
-    </div>
+    </article>
 
-    <div class="card">
+    <article class="card">
       <h3>StintikHub</h3>
-      <p>Этот сайт — длинная страница-портфолио. Сюда же можно добавлять новые проекты.</p>
+      <p>Этот сайт — длинная визитка профиля. Сюда же можно вешать новые проекты.</p>
       <div class="btn-row">
         <a class="btn" href="https://github.com/Stintik-123/StintikHub" target="_blank" rel="noopener">Репозиторий</a>
       </div>
-    </div>
+    </article>
 
-    <div class="card card-muted">
-      <h3>+ Следующий проект</h3>
-      <p>Заглушка. Когда появится — карточка и кнопки.</p>
-    </div>
+    <article class="card card-dim">
+      <h3>vpn-configs-russia · ReadyPlay</h3>
+      <p>Доп. репы на GitHub — эксперименты вокруг конфигов и мелких HTML-штук.</p>
+      <div class="btn-row">
+        <a class="btn btn-sm" href="https://github.com/Stintik-123" target="_blank" rel="noopener">Все репы</a>
+      </div>
+    </article>
   </section>
 
   <!-- REDDIT -->
-  <section class="block" id="reddit">
+  <section class="section reveal" id="reddit">
     <p class="eyebrow">reddit</p>
     <h2>Reddit</h2>
     <div class="btn-row">
-      <a class="btn" href="https://www.reddit.com/user/Stintik_Official" target="_blank" rel="noopener">u/Stintik_Official</a>
+      <a class="btn btn-primary" href="https://www.reddit.com/user/Stintik_Official" target="_blank" rel="noopener">u/Stintik_Official</a>
     </div>
 
-    <div class="card">
-      <h3>r/ru_gamer</h3>
-      <p>Игровые новости и события: релизы, хайп, скидки.</p>
-      <div class="btn-row">
-        <a class="btn" href="https://www.reddit.com/r/ru_gamer/" target="_blank" rel="noopener">Саб</a>
-        <a class="btn" href="https://www.reddit.com/user/Stintik_Official" target="_blank" rel="noopener">Мои посты</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>r/RuAsska</h3>
-      <p>Модератор: правила, удаление мусора, мод-чат.</p>
-      <div class="btn-row">
-        <a class="btn" href="https://www.reddit.com/r/RuAsska/" target="_blank" rel="noopener">Саб</a>
-      </div>
+    <div class="grid-2">
+      <article class="card">
+        <h3>r/ru_gamer</h3>
+        <p>Игровые новости и события: релизы, хайп, скидки. То, за чем заходят в саб.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://www.reddit.com/r/ru_gamer/" target="_blank" rel="noopener">Саб</a>
+          <a class="btn" href="https://www.reddit.com/user/Stintik_Official/submitted/" target="_blank" rel="noopener">Мои посты</a>
+        </div>
+      </article>
+      <article class="card">
+        <h3>r/RuAsska</h3>
+        <p>Модератор: правила, удаление запрещёнки, мод-чат. Не бездельничать.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://www.reddit.com/r/RuAsska/" target="_blank" rel="noopener">Саб</a>
+        </div>
+      </article>
     </div>
 
     <details class="fold">
-      <summary>Идеи и эксперименты</summary>
+      <summary>Эксперименты</summary>
       <div class="fold-body">
-        <p>Были заходы в отдельные сабы и ботов (например, посты про скидки Steam). Когда что-то стабильно выстрелит — можно вынести отдельной карточкой с кнопками.</p>
+        <p>Были идеи отдельных сабов и ботов (скидки Steam и т.п.). Когда что-то стабильно — вынесу отдельной карточкой.</p>
       </div>
     </details>
   </section>
 
   <!-- TELEGRAM -->
-  <section class="block" id="telegram">
+  <section class="section reveal" id="telegram">
     <p class="eyebrow">telegram</p>
     <h2>Telegram</h2>
-    <div class="card">
+    <article class="card">
       <h3>@StintikVPN</h3>
-      <p>Канал: обновления VPN-проекта, прокси, заметки.</p>
+      <p>Обновления проекта, прокси, заметки. Канал создан вместе с VPN-сборкой (май 2026).</p>
       <div class="btn-row">
-        <a class="btn" href="https://t.me/StintikVPN" target="_blank" rel="noopener">Открыть канал</a>
+        <a class="btn btn-primary" href="https://t.me/StintikVPN" target="_blank" rel="noopener">Канал</a>
+        <a class="btn" href="https://t.me/StintikVPN_bot" target="_blank" rel="noopener">@StintikVPN_bot</a>
       </div>
-    </div>
-    <details class="fold">
-      <summary>Про бота</summary>
-      <div class="fold-body">
-        <p>Был/будет бот с меню (подписки, списки, прокси). Ссылку на бота допиши, когда будет финальный юзернейм.</p>
-      </div>
-    </details>
-  </section>
-
-  <!-- GITHUB -->
-  <section class="block" id="github">
-    <p class="eyebrow">github</p>
-    <h2>GitHub</h2>
-    <div class="btn-row">
-      <a class="btn" href="https://github.com/Stintik-123" target="_blank" rel="noopener">Профиль @Stintik-123</a>
-      <a class="btn" href="https://github.com/Stintik-123/StintikVPN" target="_blank" rel="noopener">StintikVPN</a>
-      <a class="btn" href="https://github.com/Stintik-123/StintikHub" target="_blank" rel="noopener">StintikHub</a>
-    </div>
+    </article>
   </section>
 
   <!-- NOW -->
-  <section class="block" id="now">
+  <section class="section reveal" id="now">
     <p class="eyebrow">now</p>
     <h2>Сейчас</h2>
-    <ul class="list">
-      <li>Поддержка и обновления <strong>StintikVPN</strong></li>
-      <li>Модерация <strong>r/RuAsska</strong></li>
-      <li>Новости в <strong>r/ru_gamer</strong></li>
-      <li>Этот хаб — страница профиля</li>
+    <ul class="timeline">
+      <li><span class="dot"></span>Поддержка и обновы <strong>StintikVPN</strong></li>
+      <li><span class="dot"></span>Модерация <strong>r/RuAsska</strong></li>
+      <li><span class="dot"></span>Новости в <strong>r/ru_gamer</strong></li>
+      <li><span class="dot"></span>Этот хаб — оформление профиля</li>
     </ul>
     <div class="btn-row">
-      <a class="btn btn-ghost" href="#projects">К проектам</a>
-      <a class="btn btn-ghost" href="#contact">Написать</a>
+      <a class="btn" href="#projects">Проекты</a>
+      <a class="btn" href="#contact">Написать</a>
     </div>
   </section>
 
   <!-- LINKS -->
-  <section class="block" id="links">
+  <section class="section reveal" id="links">
     <p class="eyebrow">links</p>
     <h2>Все ссылки</h2>
-    <p class="sub">Одна сетка — куда угодно ткнуть.</p>
     <div class="link-grid">
-      <a href="https://stintik-123.github.io/StintikVPN/" target="_blank" rel="noopener">StintikVPN — сайт</a>
-      <a href="https://github.com/Stintik-123/StintikVPN" target="_blank" rel="noopener">StintikVPN — GitHub</a>
-      <a href="https://t.me/StintikVPN" target="_blank" rel="noopener">Telegram @StintikVPN</a>
-      <a href="https://www.reddit.com/user/Stintik_Official" target="_blank" rel="noopener">Reddit u/Stintik_Official</a>
-      <a href="https://www.reddit.com/r/ru_gamer/" target="_blank" rel="noopener">r/ru_gamer</a>
-      <a href="https://www.reddit.com/r/RuAsska/" target="_blank" rel="noopener">r/RuAsska</a>
-      <a href="https://github.com/Stintik-123" target="_blank" rel="noopener">GitHub профиль</a>
-      <a href="https://github.com/Stintik-123/StintikHub" target="_blank" rel="noopener">StintikHub</a>
-      <a href="https://gitlab.com/Stintik-123/StintikVPN" target="_blank" rel="noopener">GitLab mirror</a>
-      <a href="https://codeberg.org/Stintik-123/StintikVPN" target="_blank" rel="noopener">Codeberg mirror</a>
+      <a href="https://stintik-123.github.io/StintikVPN/" target="_blank" rel="noopener"><span>StintikVPN</span><em>сайт</em></a>
+      <a href="https://github.com/Stintik-123/StintikVPN" target="_blank" rel="noopener"><span>StintikVPN</span><em>GitHub</em></a>
+      <a href="https://t.me/StintikVPN" target="_blank" rel="noopener"><span>Telegram</span><em>@StintikVPN</em></a>
+      <a href="https://t.me/StintikVPN_bot" target="_blank" rel="noopener"><span>Бот</span><em>@StintikVPN_bot</em></a>
+      <a href="https://www.reddit.com/user/Stintik_Official" target="_blank" rel="noopener"><span>Reddit</span><em>u/Stintik_Official</em></a>
+      <a href="https://www.reddit.com/r/ru_gamer/" target="_blank" rel="noopener"><span>r/ru_gamer</span><em>новости</em></a>
+      <a href="https://www.reddit.com/r/RuAsska/" target="_blank" rel="noopener"><span>r/RuAsska</span><em>мод</em></a>
+      <a href="https://github.com/Stintik-123" target="_blank" rel="noopener"><span>GitHub</span><em>профиль</em></a>
+      <a href="https://gitlab.com/Stintik-123/StintikVPN" target="_blank" rel="noopener"><span>GitLab</span><em>зеркало</em></a>
+      <a href="https://codeberg.org/Stintik-123/StintikVPN" target="_blank" rel="noopener"><span>Codeberg</span><em>зеркало</em></a>
+      <a href="https://github.com/Stintik-123/StintikHub" target="_blank" rel="noopener"><span>StintikHub</span><em>этот сайт</em></a>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="block" id="contact">
+  <section class="section reveal" id="contact">
     <p class="eyebrow">contact</p>
     <h2>Контакты</h2>
-    <p>Пиши туда, где реально отвечаю:</p>
+    <p class="prose">Пиши туда, где реально отвечаю.</p>
     <div class="btn-row">
-      <a class="btn" href="https://t.me/StintikVPN" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn btn-primary" href="https://t.me/StintikVPN" target="_blank" rel="noopener">Telegram</a>
       <a class="btn" href="https://www.reddit.com/user/Stintik_Official" target="_blank" rel="noopener">Reddit</a>
       <a class="btn" href="https://github.com/Stintik-123" target="_blank" rel="noopener">GitHub</a>
     </div>
-    <p class="hint">Личный @ в TG / Discord — допиши в HTML, если нужно.</p>
-    <div class="btn-row">
-      <a class="btn btn-ghost" href="#top">Наверх ↑</a>
-    </div>
+    <p class="note">Личный Discord / второй TG — допиши в HTML, если нужно.</p>
+    <a class="back-top" href="#top">Наверх ↑</a>
   </section>
 
-</article>
+</main>
 
-<footer class="foot">
+<footer class="footer">
   <span>StintikHub</span>
-  <span class="muted">одна страница · скролл · кнопки открывают ссылки и спойлеры</span>
+  <span class="muted">не путать со стримером Stintik (Twitch)</span>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

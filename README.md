@@ -1,15 +1,14 @@
 # StintikHub
 
-Одна длинная страница-портфолио: скролл вверх/вниз, кнопки открывают ссылки и спойлеры (`<details>`).
+Личный хаб: одна длинная страница, кнопки, анимации появления, аватар.
 
 ## Pages
 
-Settings → Pages → branch `main` → folder `/`.
+Settings → Pages → `main` → `/`
 
-`https://stintik-123.github.io/StintikHub/`
+https://stintik-123.github.io/StintikHub/
 
-## Файлы
+## Контент
 
-- `index.html` — весь контент
-- `style.css` — оформление
-- `script.js` — пока пустой (не нужен для кнопок/спойлеров)
+Только публичное: StintikVPN, Reddit (ru_gamer / RuAsska), Telegram, GitHub.
+Стример Stintik (Twitch) — **другой человек**, на сайте это явно написано.
