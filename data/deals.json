@@ -1,42 +1,91 @@
 {
-  "updated_at": "2026-09-19T16:40:41Z",
-  "source": "steam_featuredcategories",
+  "updated_at": "2026-09-19T17:18:50Z",
+  "source": "steam_search_specials",
   "regions": ["ru", "kz", "ua", "us"],
-  "count": 5,
+  "count": 8,
   "deals": [
     {
-      "appid": 1850570,
-      "name": "DEATH STRANDING DIRECTOR'S CUT",
-      "discount": 75,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/header.jpg",
-      "url": "https://store.steampowered.com/app/1850570/",
-      "discount_expiration": null,
+      "appid": 582660,
+      "name": "Black Desert",
+      "discount": 90,
+      "header_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582660/ee187dc9383b5c278a40e5888aa2f6ab7212d527/capsule_231x87_alt_assets_27.jpg",
+      "capsule": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582660/ee187dc9383b5c278a40e5888aa2f6ab7212d527/capsule_231x87_alt_assets_27.jpg",
+      "url": "https://store.steampowered.com/app/582660/",
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 82400,
-          "original": 329900,
-          "final_formatted": "824 ₽",
-          "original_formatted": "3299 ₽"
+          "final": 3500,
+          "original": 35000,
+          "final_formatted": "35 ₽",
+          "original_formatted": "350 ₽"
         }
       }
     },
     {
-      "appid": 275850,
-      "name": "No Man's Sky",
-      "discount": 60,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/header.jpg",
-      "url": "https://store.steampowered.com/app/275850/",
-      "discount_expiration": null,
+      "appid": 613100,
+      "name": "House Flipper",
+      "discount": 90,
+      "header_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/613100/446e6c6faa35dd9303ae58753b532bdb4ff42960/capsule_231x87.jpg",
+      "capsule": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/613100/446e6c6faa35dd9303ae58753b532bdb4ff42960/capsule_231x87.jpg",
+      "url": "https://store.steampowered.com/app/613100/",
       "prices": {
-        "us": {
-          "currency": "USD",
-          "final": 2399,
-          "original": 5999,
-          "final_formatted": "$23.99",
-          "original_formatted": "$59.99"
+        "ru": {
+          "currency": "RUB",
+          "final": 8800,
+          "original": 88000,
+          "final_formatted": "88 ₽",
+          "original_formatted": "880 ₽"
+        }
+      }
+    },
+    {
+      "appid": 373420,
+      "name": "Divinity: Original Sin - Enhanced Edition",
+      "discount": 90,
+      "header_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/373420/capsule_231x87.jpg",
+      "capsule": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/373420/capsule_231x87.jpg",
+      "url": "https://store.steampowered.com/app/373420/",
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 6900,
+          "original": 69000,
+          "final_formatted": "69 ₽",
+          "original_formatted": "690 ₽"
+        }
+      }
+    },
+    {
+      "appid": 252490,
+      "name": "Rust",
+      "discount": 50,
+      "header_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/252490/21aac0b6e20e1ba12f635e7deb730e32a51afbd5/capsule_231x87.jpg",
+      "capsule": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/252490/21aac0b6e20e1ba12f635e7deb730e32a51afbd5/capsule_231x87.jpg",
+      "url": "https://store.steampowered.com/app/252490/",
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 84900,
+          "original": 169800,
+          "final_formatted": "849 ₽",
+          "original_formatted": "1698 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1172710,
+      "name": "Dune: Awakening",
+      "discount": 50,
+      "header_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172710/f7a92d165b24c69814d0ba2cad71fde3b9977e1d/capsule_231x87_alt_assets_8.jpg",
+      "capsule": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172710/f7a92d165b24c69814d0ba2cad71fde3b9977e1d/capsule_231x87_alt_assets_8.jpg",
+      "url": "https://store.steampowered.com/app/1172710/",
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 149500,
+          "original": 299000,
+          "final_formatted": "1495 ₽",
+          "original_formatted": "2990 ₽"
         }
       }
     },
@@ -47,7 +96,6 @@
       "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg",
       "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg",
       "url": "https://store.steampowered.com/app/1086940/",
-      "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
@@ -55,49 +103,40 @@
           "original": 199900,
           "final_formatted": "1399 ₽",
           "original_formatted": "1999 ₽"
-        },
-        "us": {
-          "currency": "USD",
-          "final": 4199,
-          "original": 5999,
-          "final_formatted": "$41.99",
-          "original_formatted": "$59.99"
         }
       }
     },
     {
-      "appid": 252490,
-      "name": "Rust",
+      "appid": 1627720,
+      "name": "Lies of P",
       "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg",
-      "url": "https://store.steampowered.com/app/252490/",
-      "discount_expiration": null,
-      "prices": {
-        "us": {
-          "currency": "USD",
-          "final": 1999,
-          "original": 3999,
-          "final_formatted": "$19.99",
-          "original_formatted": "$39.99"
-        }
-      }
-    },
-    {
-      "appid": 1245620,
-      "name": "ELDEN RING",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg",
-      "url": "https://store.steampowered.com/app/1245620/",
-      "discount_expiration": null,
+      "header_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1627720/capsule_231x87.jpg",
+      "capsule": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1627720/capsule_231x87.jpg",
+      "url": "https://store.steampowered.com/app/1627720/",
       "prices": {
         "ru": {
           "currency": "RUB",
           "final": 199900,
-          "original": 399900,
+          "original": 399800,
           "final_formatted": "1999 ₽",
-          "original_formatted": "3999 ₽"
+          "original_formatted": "3998 ₽"
+        }
+      }
+    },
+    {
+      "appid": 275850,
+      "name": "No Man's Sky",
+      "discount": 60,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/header.jpg",
+      "url": "https://store.steampowered.com/app/275850/",
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 99900,
+          "original": 249900,
+          "final_formatted": "999 ₽",
+          "original_formatted": "2499 ₽"
         }
       }
     }
