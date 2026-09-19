@@ -98,10 +98,15 @@ a:hover { text-decoration: underline; }
   letter-spacing: -0.03em;
 }
 .intro p {
-  margin: 0;
+  margin: 0 0 0.35rem;
   color: var(--muted);
-  max-width: 34rem;
+  max-width: 36rem;
   font-size: 0.95rem;
+}
+.stats-line {
+  font-size: 0.8rem !important;
+  color: #666 !important;
+  margin-top: 0.5rem !important;
 }
 .intro-art {
   width: min(160px, 28vw);
@@ -213,7 +218,7 @@ a:hover { text-decoration: underline; }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 0.9rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .card {
@@ -232,6 +237,7 @@ a:hover { text-decoration: underline; }
   transform: translateY(-2px);
   text-decoration: none !important;
 }
+.card-pop { border-color: #444; }
 .card-media {
   position: relative;
   aspect-ratio: 460 / 215;
@@ -244,6 +250,8 @@ a:hover { text-decoration: underline; }
   height: 100%;
   object-fit: cover;
   display: block;
+  filter: none;
+  opacity: 1;
 }
 .card-media video {
   position: absolute;
@@ -266,6 +274,20 @@ a:hover { text-decoration: underline; }
   font-weight: 800;
   font-size: 0.9rem;
   padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+}
+.tag-pop {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  z-index: 2;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.4rem;
   border-radius: 4px;
 }
 .card-body {
@@ -301,7 +323,29 @@ a:hover { text-decoration: underline; }
 }
 .price-miss { font-size: 0.85rem; color: var(--muted); }
 .price-note { font-size: 0.72rem; color: var(--muted); }
-.multi { font-size: 0.72rem; color: var(--muted); }
+.multi {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.more-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0 1.5rem;
+}
+.more-btn {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line2);
+  border-radius: 999px;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.more-btn:hover {
+  border-color: var(--white);
+  background: #111;
+}
 
 .about {
   border-top: 1px solid var(--line);
@@ -319,9 +363,15 @@ a:hover { text-decoration: underline; }
   padding: 1rem;
   background: var(--panel);
 }
-.about-card h3 { margin: 0 0 0.4rem; font-size: 0.95rem; }
-.about-card p { margin: 0; font-size: 0.88rem; color: var(--muted); }
-.about-card code { font-size: 0.8em; color: var(--text); }
+.about-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+}
+.about-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
 
 .footer {
   border-top: 1px solid var(--line);
