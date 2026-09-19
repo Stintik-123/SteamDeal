@@ -1,0 +1,105 @@
+{
+  "updated_at": "2026-09-19T16:40:41Z",
+  "source": "steam_featuredcategories",
+  "regions": ["ru", "kz", "ua", "us"],
+  "count": 5,
+  "deals": [
+    {
+      "appid": 1850570,
+      "name": "DEATH STRANDING DIRECTOR'S CUT",
+      "discount": 75,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/header.jpg",
+      "url": "https://store.steampowered.com/app/1850570/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 82400,
+          "original": 329900,
+          "final_formatted": "824 ₽",
+          "original_formatted": "3299 ₽"
+        }
+      }
+    },
+    {
+      "appid": 275850,
+      "name": "No Man's Sky",
+      "discount": 60,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/header.jpg",
+      "url": "https://store.steampowered.com/app/275850/",
+      "discount_expiration": null,
+      "prices": {
+        "us": {
+          "currency": "USD",
+          "final": 2399,
+          "original": 5999,
+          "final_formatted": "$23.99",
+          "original_formatted": "$59.99"
+        }
+      }
+    },
+    {
+      "appid": 1086940,
+      "name": "Baldur's Gate 3",
+      "discount": 30,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg",
+      "url": "https://store.steampowered.com/app/1086940/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 139900,
+          "original": 199900,
+          "final_formatted": "1399 ₽",
+          "original_formatted": "1999 ₽"
+        },
+        "us": {
+          "currency": "USD",
+          "final": 4199,
+          "original": 5999,
+          "final_formatted": "$41.99",
+          "original_formatted": "$59.99"
+        }
+      }
+    },
+    {
+      "appid": 252490,
+      "name": "Rust",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg",
+      "url": "https://store.steampowered.com/app/252490/",
+      "discount_expiration": null,
+      "prices": {
+        "us": {
+          "currency": "USD",
+          "final": 1999,
+          "original": 3999,
+          "final_formatted": "$19.99",
+          "original_formatted": "$39.99"
+        }
+      }
+    },
+    {
+      "appid": 1245620,
+      "name": "ELDEN RING",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg",
+      "url": "https://store.steampowered.com/app/1245620/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 199900,
+          "original": 399900,
+          "final_formatted": "1999 ₽",
+          "original_formatted": "3999 ₽"
+        }
+      }
+    }
+  ]
+}
