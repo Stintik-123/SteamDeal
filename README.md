@@ -1,46 +1,24 @@
 # SteamDeal
 
-Сайт актуальных скидок Steam: карточки, поиск, фильтр по скидке, цены **RU / KZ / UA / US**.
+Полноценный сайт скидок Steam: specials, цены RU/KZ/UA/US, чёрно-белый UI.
 
-## Ссылки
+## Сайт
 
-- Репозиторий: https://github.com/Stintik-123/SteamDeal
-- Сайт (после включения Pages): https://stintik-123.github.io/SteamDeal/
+**Settings → Pages → main / (root)**  
+https://stintik-123.github.io/SteamDeal/
 
-## Как включить сайт
+## Что умеет
 
-1. **Settings → Pages**
-2. Source: **Deploy from a branch**
-3. Branch: `main` / folder: `/ (root)`
-4. Save
+- Сбор specials через Steam Search (сотни игр)
+- Мультивалюта + appdetails для топа скидок
+- Поиск, сортировка, фильтр %, чипы −50/−70/−90
+- «Только с ценой в регионе»
+- Actions каждые 6 часов
 
-Через 1–2 минуты откроется `https://stintik-123.github.io/SteamDeal/`
+## Полный список скидок
 
-## Как обновляются скидки
+**Actions → Update Steam deals → Run workflow**
 
-GitHub Action `Update Steam deals` раз в 6 часов (и вручную):
+Подтянет ~300 specials. Скрипт: `node scripts/update-deals.mjs`
 
-1. Тянет `featuredcategories` Steam по регионам
-2. Пишет `data/deals.json`
-3. Коммитит в `main`
-
-**Actions → Update Steam deals → Run workflow** — обновить сразу.
-
-Локально:
-
-```bash
-node scripts/update-deals.mjs
-```
-
-## Структура
-
-```
-index.html          — страница
-assets/style.css    — стили
-assets/app.js       — UI, фильтры
-data/deals.json     — данные для сайта
-scripts/update-deals.mjs
-.github/workflows/update-deals.yml
-```
-
-Неофициальный проект. Цены ориентировочные, источник — публичный API Steam Store.
+Неофициальный проект. Источник — публичные данные Steam Store.
