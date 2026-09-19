@@ -1,24 +1,34 @@
 # SteamDeal
 
-Полноценный сайт скидок Steam: specials, цены RU/KZ/UA/US, чёрно-белый UI.
+Чёрно-белая витрина скидок Steam: specials, цены RU / KZ / UA / US, топ дня, трейлеры при наведении.
 
-## Сайт
-
-**Settings → Pages → main / (root)**  
-https://stintik-123.github.io/SteamDeal/
+**Сайт:** https://stintik-123.github.io/SteamDeal/
 
 ## Что умеет
 
-- Сбор specials через Steam Search (сотни игр)
-- Мультивалюта + appdetails для топа скидок
-- Поиск, сортировка, фильтр %, чипы −50/−70/−90
-- «Только с ценой в регионе»
-- Actions каждые 6 часов
+- Сотни specials через Steam Search (обновление раз в 6 часов)
+- Регионы и форматированные цены
+- Фильтры: %, поиск, «популярные / жирные», «с ценой в регионе»
+- Сортировка: скидка, цена, экономия, название
+- Топ дня + блок «бесплатно сейчас»
+- Картинки header.jpg (не мыльные capsule)
+- Трейлер Steam на hover (только ПК)
+- «Показать ещё» вместо бесконечной простыни
 
-## Полный список скидок
+## Обновить данные вручную
 
-**Actions → Update Steam deals → Run workflow**
+GitHub → **Actions** → **Update Steam deals** → **Run workflow**
 
-Подтянет ~300 specials. Скрипт: `node scripts/update-deals.mjs`
+Локально:
 
-Неофициальный проект. Источник — публичные данные Steam Store.
+```bash
+node scripts/update-deals.mjs
+```
+
+## Заметки
+
+- Не магазин: только ссылки в официальный Steam Store.
+- Фильтр «популярные» — список appid в `data/popular.json` + автодобор скидок ≥70%, если совпадений мало.
+- Источник — публичные API / HTML Steam Store.
+
+Проект Stintik. Неофициальный.

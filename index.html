@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="SteamDeal — популярные скидки Steam. RU / KZ / UA / US." />
+  <meta name="description" content="SteamDeal — скидки Steam без помойки. RU / KZ / UA / US, трейлеры, топ дня." />
   <meta name="theme-color" content="#000000" />
   <title>SteamDeal</title>
   <link rel="preconnect" href="https://shared.akamai.steamstatic.com" />
@@ -19,8 +19,8 @@
         <span>SteamDeal</span>
       </a>
       <nav class="nav">
+        <a href="#top">Топ</a>
         <a href="#deals">Скидки</a>
-        <a href="#top">Топ дня</a>
         <a href="#about">О проекте</a>
       </nav>
       <div class="header-stats">
@@ -33,8 +33,12 @@
   <main class="wrap">
     <section class="intro">
       <div class="intro-text">
-        <h1>Скидки на то, во что играют</h1>
-        <p>Не вся помойка specials — в приоритете заметные игры. Цены по регионам, трейлер при наведении (ПК).</p>
+        <h1>Скидки Steam без помойки</h1>
+        <p>
+          Витрина specials: регионы, фильтры, топ дня.
+          На ПК при наведении — трейлер. Не магазин — только ссылки в Steam.
+        </p>
+        <p id="statsLine" class="stats-line">загрузка…</p>
       </div>
       <img class="intro-art" src="Image%20(11)%20(4).png" alt="SteamDeal" />
     </section>
@@ -44,8 +48,13 @@
       <div id="topRow" class="top-row"></div>
     </section>
 
+    <section id="freeBlock" class="top-block" hidden>
+      <h2 class="section-title">Бесплатно сейчас</h2>
+      <div id="freeRow" class="top-row"></div>
+    </section>
+
     <section id="deals" class="panel">
-      <input id="search" type="search" placeholder="Поиск игры…" autocomplete="off" />
+      <input id="search" type="search" placeholder="Поиск по названию…" autocomplete="off" />
       <div class="row">
         <label>
           Регион
@@ -59,8 +68,9 @@
         <label>
           Сортировка
           <select id="sort">
-            <option value="discount">Скидка</option>
+            <option value="discount">Скидка %</option>
             <option value="price">Цена</option>
+            <option value="savings">Экономия</option>
             <option value="name">Название</option>
           </select>
         </label>
@@ -69,15 +79,15 @@
           <select id="minDiscount">
             <option value="0">0+</option>
             <option value="20">20+</option>
-            <option value="30">30+</option>
-            <option value="50" selected>50+</option>
+            <option value="30" selected>30+</option>
+            <option value="50">50+</option>
             <option value="70">70+</option>
             <option value="90">90+</option>
           </select>
         </label>
         <label class="check">
           <input type="checkbox" id="onlyPopular" checked />
-          Только популярные
+          Популярные / жирные
         </label>
         <label class="check">
           <input type="checkbox" id="onlyPriced" />
@@ -86,7 +96,8 @@
       </div>
       <div class="chips" id="chips">
         <button type="button" data-min="0" class="chip">Все %</button>
-        <button type="button" data-min="50" class="chip active">−50%</button>
+        <button type="button" data-min="30" class="chip active">−30%</button>
+        <button type="button" data-min="50" class="chip">−50%</button>
         <button type="button" data-min="70" class="chip">−70%</button>
         <button type="button" data-min="90" class="chip">−90%</button>
       </div>
@@ -94,28 +105,35 @@
 
     <p id="status" class="status" hidden></p>
     <section id="grid" class="grid"></section>
+    <div class="more-wrap">
+      <button type="button" id="moreBtn" class="more-btn" hidden>Показать ещё</button>
+    </div>
 
     <section id="about" class="about">
       <h2 class="section-title">О проекте</h2>
       <div class="about-grid">
         <div class="about-card">
-          <h3>Откуда цены</h3>
-          <p>Публичные данные Steam Store (search specials + регионы). Не магазин — только витрина со ссылками на Steam.</p>
+          <h3>Откуда данные</h3>
+          <p>Публичный Steam Store (search specials + регионы). Цены ориентировочные, клик ведёт в официальный магазин.</p>
         </div>
         <div class="about-card">
-          <h3>Популярные</h3>
-          <p>Фильтр отсекает случайный инди-хлам из specials. Список appid в <code>data/popular.json</code> — можно расширять.</p>
+          <h3>Популярные / жирные</h3>
+          <p>Список известных appid + автодобавление скидок ≥70%, если совпадений мало. Можно выключить фильтр.</p>
         </div>
         <div class="about-card">
           <h3>Трейлеры</h3>
-          <p>На десктопе при наведении на карточку подгружается трейлер Steam (без звука). На телефоне — только картинка.</p>
+          <p>На десктопе при наведении подгружается трейлер Steam (без звука). На телефоне — только картинка.</p>
+        </div>
+        <div class="about-card">
+          <h3>Обновление</h3>
+          <p>GitHub Actions раз в 6 часов. Ручной запуск: Actions → Update Steam deals.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer wrap">
-    <p>Неофициальный проект. Цены ориентировочные.</p>
+    <p>Неофициальный проект Stintik. Не магазин — только витрина.</p>
     <p>
       <a href="https://github.com/Stintik-123/SteamDeal" target="_blank" rel="noopener">GitHub</a>
       ·
