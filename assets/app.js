@@ -31,7 +31,11 @@
   if (els.hideUnknown) els.hideUnknown.checked = state.hideUnknown;
 
   function esc(s) {
-    return String(s).replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"');
+    return String(s)
+      .replace(/&/g, '\u0026amp;')
+      .replace(/</g, '\u0026lt;')
+      .replace(/>/g, '\u0026gt;')
+      .replace(/"/g, '\u0026quot;');
   }
   function setStatus(msg, err) {
     if (!els.status) return;
@@ -153,7 +157,7 @@
     const media = '<div class="tile-media">' +
       (img ? '<img src="' + esc(img) + '" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/' + d.appid + '/capsule_616x353.jpg\'" />' : '') +
       (canHover ? '<video muted loop playsinline preload="none" data-appid="' + d.appid + '"></video>' : '') +
-      '<span class="stamp' + (hot ? ' hot' : '') + '">−' + d.discount + '%</span>' +
+      '<span class="stamp' + (hot ? ' hot' : '') + '">\u2212' + d.discount + '%</span>' +
       (pop ? '<span class="badge-top">изв.</span>' : '') + '</div>';
     return '<a class="tile ' + sizeClass + '" href="' + esc(d.url || 'https://store.steampowered.com/app/' + d.appid + '/') +
       '" target="_blank" rel="noopener" data-appid="' + d.appid + '">' + media +
