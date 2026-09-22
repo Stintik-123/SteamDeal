@@ -1,146 +1,430 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="SteamDeal — скидки Steam без помойки. RU / KZ / UA / US, трейлеры, топ дня." />
-  <meta name="theme-color" content="#000000" />
-  <title>SteamDeal</title>
-  <link rel="preconnect" href="https://shared.akamai.steamstatic.com" />
-  <link rel="preconnect" href="https://cdn.akamai.steamstatic.com" />
-  <link rel="preconnect" href="https://shared.fastly.steamstatic.com" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="description" content="SteamDeal — быстрый поиск лучших скидок, бесплатных игр и популярных предложений Steam.">
+  <title>SteamDeal — скидки Steam без помойки</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
-  <header class="header">
-    <div class="wrap header-row">
-      <a class="brand" href="./">
-        <img class="brand-logo" src="Image%20(11)%20(4).png" alt="" width="40" height="40" />
-        <span>SteamDeal</span>
-      </a>
-      <nav class="nav">
-        <a href="#top">Топ</a>
+  <div class="app-shell">
+
+    <header class="site-header">
+      <div class="header-inner">
+
+        <a class="brand" href="#" aria-label="SteamDeal">
+          <span class="brand-mark">S</span>
+          <span class="brand-text">
+            <strong>SteamDeal</strong>
+            <small>DEALS WITHOUT THE NOISE</small>
+          </span>
+        </a>
+
+        <nav class="main-nav">
+          <a href="#deals">Скидки</a>
+          <a href="#top">Топ</a>
+          <a href="#freeBlock">Бесплатно</a>
+          <a href="#about">О проекте</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-button" id="randomBtn" type="button" title="Случайная скидка">
+            <span>↗</span>
+            <span class="desktop-only">Мне повезёт</span>
+          </button>
+
+          <button class="icon-button" id="themeBtn" type="button" title="Сменить тему">
+            ◐
+          </button>
+
+          <a
+            class="github-button"
+            href="https://github.com/Stintik-123/SteamDeal"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="live-dot"></span>
+            STEAM DEALS
+          </div>
+
+          <h1>
+            Найди скидку.<br>
+            <span>Не копайся в помойке.</span>
+          </h1>
+
+          <p>
+            SteamDeal собирает реальные предложения Steam,
+            показывает нормальные цены и помогает быстро найти
+            игры, которые действительно стоят внимания.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="#deals">
+              Смотреть скидки
+              <span>↓</span>
+            </a>
+
+            <button class="secondary-button" id="heroRandomBtn" type="button">
+              Случайная игра
+              <span>↗</span>
+            </button>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <strong id="heroCount">—</strong>
+              <span>предложений</span>
+            </div>
+
+            <div>
+              <strong id="heroUpdated">—</strong>
+              <span>обновлено</span>
+            </div>
+
+            <div>
+              <strong>4</strong>
+              <span>региона</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+
+          <div class="hero-card hero-card-main">
+            <div class="hero-card-top">
+              <span class="mini-label">ТОП СКИДКА</span>
+              <span class="mini-discount">-90%</span>
+            </div>
+
+            <div class="hero-cover"></div>
+
+            <div class="hero-card-info">
+              <span class="skeleton-line long"></span>
+              <span class="skeleton-line short"></span>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-one">
+            <span>ПОПУЛЯРНО</span>
+            <strong>★</strong>
+          </div>
+
+          <div class="floating-card floating-card-two">
+            <span>ЭКОНОМИЯ</span>
+            <strong>−</strong>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section featured-section" id="top">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">01 / ВЫБОРКА</span>
+            <h2>Скидки, которые стоит увидеть</h2>
+            <p>Самые заметные предложения прямо сейчас.</p>
+          </div>
+
+          <a href="#deals" class="text-link">
+            Весь каталог →
+          </a>
+        </div>
+
+        <div class="featured-grid" id="topGrid">
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+        </div>
+      </section>
+
+
+      <section class="section catalog-section" id="deals">
+
+        <div class="section-heading catalog-heading">
+          <div>
+            <span class="section-kicker">02 / КАТАЛОГ</span>
+            <h2>Все скидки</h2>
+            <p id="catalogSubtitle">Ищи игру, сортируй предложения и забирай лучшее.</p>
+          </div>
+
+          <div class="view-switch" role="group" aria-label="Вид каталога">
+            <button class="view-button active" data-view="grid" type="button">▦</button>
+            <button class="view-button" data-view="list" type="button">☷</button>
+          </div>
+        </div>
+
+
+        <div class="filters">
+
+          <div class="filter-row filter-row-main">
+
+            <label class="search-box">
+              <span class="search-icon">⌕</span>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Поиск игры..."
+                autocomplete="off"
+                spellcheck="false"
+              >
+              <kbd>/</kbd>
+            </label>
+
+            <label class="select-box">
+              <span>Регион</span>
+              <select id="regionSelect">
+                <option value="ru">🇷🇺 Россия</option>
+                <option value="kz">🇰🇿 Казахстан</option>
+                <option value="ua">🇺🇦 Украина</option>
+                <option value="us">🇺🇸 США</option>
+              </select>
+            </label>
+
+            <label class="select-box">
+              <span>Сортировка</span>
+              <select id="sortSelect">
+                <option value="discount">По скидке</option>
+                <option value="savings">По экономии</option>
+                <option value="price">Сначала дешёвые</option>
+                <option value="name">По названию</option>
+              </select>
+            </label>
+
+          </div>
+
+
+          <div class="discount-filter">
+
+            <div class="range-heading">
+              <div>
+                <strong>Минимальная скидка</strong>
+                <span>Показывать только предложения от выбранного процента.</span>
+              </div>
+
+              <strong class="range-value">
+                <span id="discountValue">0</span>%
+              </strong>
+            </div>
+
+            <input
+              id="discountRange"
+              class="range-input"
+              type="range"
+              min="0"
+              max="90"
+              step="5"
+              value="0"
+            >
+
+            <div class="range-labels">
+              <span>0%</span>
+              <span>25%</span>
+              <span>50%</span>
+              <span>75%</span>
+              <span>90%+</span>
+            </div>
+
+          </div>
+
+
+          <div class="quick-filters">
+            <button class="quick-filter active" data-discount="0" type="button">Все</button>
+            <button class="quick-filter" data-discount="30" type="button">−30%+</button>
+            <button class="quick-filter" data-discount="50" type="button">−50%+</button>
+            <button class="quick-filter" data-discount="70" type="button">−70%+</button>
+            <button class="quick-filter" data-discount="90" type="button">−90%+</button>
+
+            <span class="filter-divider"></span>
+
+            <label class="switch-filter">
+              <input id="popularOnly" type="checkbox">
+              <span class="switch"></span>
+              Популярные
+            </label>
+
+            <label class="switch-filter">
+              <input id="pricedOnly" type="checkbox">
+              <span class="switch"></span>
+              Есть цена
+            </label>
+
+            <button class="reset-filters" id="resetFilters" type="button">
+              Сбросить
+            </button>
+          </div>
+
+        </div>
+
+
+        <div class="catalog-status">
+          <span id="resultsCount">Загрузка...</span>
+
+          <button id="favoritesToggle" class="favorites-toggle" type="button">
+            ♡ Избранное <span id="favoritesCount">0</span>
+          </button>
+        </div>
+
+
+        <div id="dealGrid" class="deal-grid">
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+        </div>
+
+
+        <div id="emptyState" class="empty-state hidden">
+          <div class="empty-icon">⌕</div>
+          <h3>Ничего не нашли</h3>
+          <p>Попробуй уменьшить скидку или убрать часть фильтров.</p>
+          <button id="emptyReset" class="secondary-button" type="button">
+            Сбросить фильтры
+          </button>
+        </div>
+
+
+        <div class="load-more-wrap">
+          <button id="loadMore" class="load-more" type="button">
+            Показать ещё
+            <span>↓</span>
+          </button>
+        </div>
+
+      </section>
+
+
+      <section class="section free-section" id="freeBlock">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">03 / FREE</span>
+            <h2>Бесплатно сейчас</h2>
+            <p>Игры и предложения, за которые сейчас не нужно платить.</p>
+          </div>
+        </div>
+
+        <div id="freeGrid" class="free-grid">
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+        </div>
+
+      </section>
+
+
+      <section class="section about-section" id="about">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">04 / ABOUT</span>
+            <h2>SteamDeal — это не магазин</h2>
+            <p>
+              Мы не продаём игры и не пытаемся заставить тебя купить
+              очередную скидку. Здесь задача проще: найти хорошую цену
+              максимально быстро.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="about-grid">
+
+          <article class="about-card">
+            <span class="about-number">01</span>
+            <h3>Актуальные данные</h3>
+            <p>
+              Каталог обновляется автоматически. Цены и скидки
+              берутся из данных Steam.
+            </p>
+          </article>
+
+          <article class="about-card">
+            <span class="about-number">02</span>
+            <h3>Нормальная фильтрация</h3>
+            <p>
+              Регион, цена, процент скидки, популярность и сортировка —
+              без бесконечного перебора страниц.
+            </p>
+          </article>
+
+          <article class="about-card">
+            <span class="about-number">03</span>
+            <h3>Без регистрации</h3>
+            <p>
+              Не нужен аккаунт, база пользователей или трекеры.
+              Открыл сайт — сразу получил список предложений.
+            </p>
+          </article>
+
+          <article class="about-card">
+            <span class="about-number">04</span>
+            <h3>Открытый проект</h3>
+            <p>
+              Исходный код доступен на GitHub. Никакой магии —
+              данные и логика находятся прямо в репозитории.
+            </p>
+          </article>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+      <div>
+        <strong>SteamDeal</strong>
+        <span>Скидки Steam без помойки.</span>
+      </div>
+
+      <div class="footer-links">
         <a href="#deals">Скидки</a>
+        <a href="#top">Топ</a>
         <a href="#about">О проекте</a>
-      </nav>
-      <div class="header-stats">
-        <span id="updated">…</span>
-        <span id="count" class="dim">—</span>
+        <a
+          href="https://github.com/Stintik-123/SteamDeal"
+          target="_blank"
+          rel="noopener noreferrer"
+        >GitHub</a>
       </div>
-    </div>
-  </header>
+    </footer>
 
-  <main class="wrap">
-    <section class="intro">
-      <div class="intro-text">
-        <h1>Скидки Steam без помойки</h1>
-        <p>
-          Витрина specials: регионы, фильтры, топ дня.
-          На ПК при наведении — трейлер. Не магазин — только ссылки в Steam.
-        </p>
-        <p id="statsLine" class="stats-line">загрузка…</p>
-      </div>
-      <img class="intro-art" src="Image%20(11)%20(4).png" alt="SteamDeal" />
-    </section>
+  </div>
 
-    <section id="top" class="top-block">
-      <h2 class="section-title">Топ скидок</h2>
-      <div id="topRow" class="top-row"></div>
-    </section>
 
-    <section id="freeBlock" class="top-block" hidden>
-      <h2 class="section-title">Бесплатно сейчас</h2>
-      <div id="freeRow" class="top-row"></div>
-    </section>
+  <div id="toast" class="toast" aria-live="polite"></div>
 
-    <section id="deals" class="panel">
-      <input id="search" type="search" placeholder="Поиск по названию…" autocomplete="off" />
-      <div class="row">
-        <label>
-          Регион
-          <select id="region">
-            <option value="ru">RU ₽</option>
-            <option value="kz">KZ ₸</option>
-            <option value="ua">UA ₴</option>
-            <option value="us">US $</option>
-          </select>
-        </label>
-        <label>
-          Сортировка
-          <select id="sort">
-            <option value="discount">Скидка %</option>
-            <option value="price">Цена</option>
-            <option value="savings">Экономия</option>
-            <option value="name">Название</option>
-          </select>
-        </label>
-        <label>
-          Мин. %
-          <select id="minDiscount">
-            <option value="0">0+</option>
-            <option value="20">20+</option>
-            <option value="30" selected>30+</option>
-            <option value="50">50+</option>
-            <option value="70">70+</option>
-            <option value="90">90+</option>
-          </select>
-        </label>
-        <label class="check">
-          <input type="checkbox" id="onlyPopular" checked />
-          Популярные / жирные
-        </label>
-        <label class="check">
-          <input type="checkbox" id="onlyPriced" />
-          С ценой в регионе
-        </label>
-      </div>
-      <div class="chips" id="chips">
-        <button type="button" data-min="0" class="chip">Все %</button>
-        <button type="button" data-min="30" class="chip active">−30%</button>
-        <button type="button" data-min="50" class="chip">−50%</button>
-        <button type="button" data-min="70" class="chip">−70%</button>
-        <button type="button" data-min="90" class="chip">−90%</button>
-      </div>
-    </section>
+  <button id="backTop" class="back-top" type="button" aria-label="Наверх">
+    ↑
+  </button>
 
-    <p id="status" class="status" hidden></p>
-    <section id="grid" class="grid"></section>
-    <div class="more-wrap">
-      <button type="button" id="moreBtn" class="more-btn" hidden>Показать ещё</button>
-    </div>
 
-    <section id="about" class="about">
-      <h2 class="section-title">О проекте</h2>
-      <div class="about-grid">
-        <div class="about-card">
-          <h3>Откуда данные</h3>
-          <p>Публичный Steam Store (search specials + регионы). Цены ориентировочные, клик ведёт в официальный магазин.</p>
-        </div>
-        <div class="about-card">
-          <h3>Популярные / жирные</h3>
-          <p>Список известных appid + автодобавление скидок ≥70%, если совпадений мало. Можно выключить фильтр.</p>
-        </div>
-        <div class="about-card">
-          <h3>Трейлеры</h3>
-          <p>На десктопе при наведении подгружается трейлер Steam (без звука). На телефоне — только картинка.</p>
-        </div>
-        <div class="about-card">
-          <h3>Обновление</h3>
-          <p>GitHub Actions раз в 6 часов. Ручной запуск: Actions → Update Steam deals.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer wrap">
-    <p>Неофициальный проект Stintik. Не магазин — только витрина.</p>
-    <p>
-      <a href="https://github.com/Stintik-123/SteamDeal" target="_blank" rel="noopener">GitHub</a>
-      ·
-      <a href="https://store.steampowered.com/search/?specials=1" target="_blank" rel="noopener">Steam Specials</a>
-    </p>
-  </footer>
-
-  <script src="assets/app.js" defer></script>
+  <script type="module" src="assets/app.js"></script>
 </body>
-</html>
+        </html>
