@@ -1,477 +1,1015 @@
-(() => {
-  const state = {
-    deals: [],
-    popular: new Set(),
-    updatedAt: null,
-    region: localStorage.getItem('sd_region') || 'ru',
-    sort: localStorage.getItem('sd_sort') || 'discount',
-    minDiscount: Number(localStorage.getItem('sd_min') ?? 30),
-    query: '',
-    onlyPriced: localStorage.getItem('sd_priced') === '1',
-    onlyPopular: localStorage.getItem('sd_popular') !== '0',
-    pageSize: 48,
-    shown: 48
-  };
+const DATA_URL = "data/deals.json";
+const POPULAR_URL = "data/popular.json";
 
-  const $ = (id) => document.getElementById(id);
-  const els = {
-    grid: $('grid'),
-    topRow: $('topRow'),
-    freeRow: $('freeRow'),
-    freeBlock: $('freeBlock'),
-    status: $('status'),
-    updated: $('updated'),
-    count: $('count'),
-    search: $('search'),
-    region: $('region'),
-    sort: $('sort'),
-    minDiscount: $('minDiscount'),
-    onlyPriced: $('onlyPriced'),
-    onlyPopular: $('onlyPopular'),
-    chips: $('chips'),
-    moreBtn: $('moreBtn'),
-    statsLine: $('statsLine')
-  };
+const PAGE_SIZE = 24;
 
-  const canHover =
-    window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+const state = {
+  deals: [],
+  popular: new Set(),
+  filtered: [],
+  visible: PAGE_SIZE,
 
-  els.region.value = state.region;
-  els.sort.value = state.sort;
-  els.minDiscount.value = String(state.minDiscount);
-  if (els.onlyPopular) els.onlyPopular.checked = state.onlyPopular;
-  if (els.onlyPriced) els.onlyPriced.checked = state.onlyPriced;
+  search: "",
+  region: localStorage.getItem("steamdeal-region") || "ru",
+  sort: localStorage.getItem("steamdeal-sort") || "discount",
 
-  function esc(s) {
-    return String(s)
-      .replace(/&/g, '&')
-      .replace(/</g, '<')
-      .replace(/>/g, '>')
-      .replace(/"/g, '"');
-  }
+  minDiscount: Number(localStorage.getItem("steamdeal-discount") || 0),
 
-  function setStatus(msg, err = false) {
-    if (!els.status) return;
-    els.status.hidden = !msg;
-    els.status.textContent = msg || '';
-    els.status.classList.toggle('err', !!err);
-  }
+  popularOnly: localStorage.getItem("steamdeal-popular") === "1",
+  pricedOnly: localStorage.getItem("steamdeal-priced") === "1",
+  favoritesOnly: false,
 
-  function formatUpdated(iso) {
-    if (!iso) return 'нет данных';
-    try {
-      const d = new Date(iso);
-      return (
-        'обн. ' +
-        d.toLocaleString('ru-RU', {
-          day: '2-digit',
-          month: '2-digit',
-          hour: '2-digit',
-          minute: '2-digit'
-        })
-      );
-    } catch {
-      return iso;
-    }
-  }
+  favorites: new Set(
+    JSON.parse(localStorage.getItem("steamdeal-favorites") || "[]")
+      .map(String)
+  ),
 
-  function bestImage(deal) {
-    if (deal.appid) {
-      return (
-        'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/' +
-        deal.appid +
-        '/header.jpg'
-      );
-    }
-    return deal.header_image || deal.capsule || '';
-  }
+  view: localStorage.getItem("steamdeal-view") || "grid"
+};
 
-  function trailerUrls(appid) {
-    const base = 'https://cdn.akamai.steamstatic.com/steam/apps/' + appid + '/';
-    return [
-      base + 'movie_max.webm',
-      base + 'movie480.webm',
-      base + 'movie_max.mp4'
-    ];
-  }
 
-  function priceFor(deal, region) {
-    const p = deal.prices && deal.prices[region];
-    if (p && (p.final_formatted || p.final != null)) return p;
-    for (const r of ['ru', 'us', 'kz', 'ua']) {
-      const x = deal.prices && deal.prices[r];
-      if (x && (x.final_formatted || x.final != null)) return { ...x, _fb: r };
-    }
-    return null;
-  }
+const els = {
+  heroCount: document.querySelector("#heroCount"),
+  heroUpdated: document.querySelector("#heroUpdated"),
 
-  function multiLine(deal, region) {
-    const parts = [];
-    for (const r of ['ru', 'kz', 'ua', 'us']) {
-      if (r === region) continue;
-      const p = deal.prices && deal.prices[r];
-      if (p && p.final_formatted) {
-        parts.push(r.toUpperCase() + ' ' + p.final_formatted);
-      }
-    }
-    return parts.slice(0, 3).join(' · ');
-  }
+  topGrid: document.querySelector("#topGrid"),
+  freeGrid: document.querySelector("#freeGrid"),
 
-  function isPopular(deal) {
-    if (state.popular.size === 0) return true;
-    return state.popular.has(Number(deal.appid));
-  }
+  dealGrid: document.querySelector("#dealGrid"),
+  emptyState: document.querySelector("#emptyState"),
 
-  function isFree(deal) {
-    if ((deal.discount || 0) >= 100) return true;
-    const p = priceFor(deal, state.region);
-    return p && (p.final === 0 || /free|бесплат/i.test(p.final_formatted || ''));
-  }
+  searchInput: document.querySelector("#searchInput"),
+  regionSelect: document.querySelector("#regionSelect"),
+  sortSelect: document.querySelector("#sortSelect"),
 
-  function list() {
-    const q = state.query.trim().toLowerCase();
-    let arr = state.deals.filter((d) => (d.discount || 0) >= state.minDiscount);
+  discountRange: document.querySelector("#discountRange"),
+  discountValue: document.querySelector("#discountValue"),
 
-    if (state.onlyPopular && state.popular.size) {
-      const hard = arr.filter(isPopular);
-      if (hard.length < 8) {
-        const extra = arr.filter(
-          (d) => !isPopular(d) && (d.discount || 0) >= 70
-        );
-        const seen = new Set(hard.map((d) => d.appid));
-        for (const d of extra) {
-          if (!seen.has(d.appid)) {
-            hard.push(d);
-            seen.add(d.appid);
-          }
-        }
-        arr = hard;
-      } else {
-        arr = hard;
-      }
-    }
+  popularOnly: document.querySelector("#popularOnly"),
+  pricedOnly: document.querySelector("#pricedOnly"),
 
-    if (q) {
-      arr = arr.filter((d) => (d.name || '').toLowerCase().includes(q));
-    }
-    if (state.onlyPriced) {
-      arr = arr.filter((d) => {
-        const p = d.prices && d.prices[state.region];
-        return p && (p.final_formatted || p.final != null);
-      });
-    }
+  resultsCount: document.querySelector("#resultsCount"),
+  favoritesCount: document.querySelector("#favoritesCount"),
+  favoritesToggle: document.querySelector("#favoritesToggle"),
 
-    arr = [...arr];
-    if (state.sort === 'discount') {
-      arr.sort(
-        (a, b) =>
-          (isPopular(b) ? 1 : 0) - (isPopular(a) ? 1 : 0) ||
-          b.discount - a.discount ||
-          String(a.name).localeCompare(String(b.name), 'ru')
-      );
-    } else if (state.sort === 'name') {
-      arr.sort((a, b) => String(a.name).localeCompare(String(b.name), 'ru'));
-    } else if (state.sort === 'savings') {
-      arr.sort((a, b) => {
-        const pa = priceFor(a, state.region);
-        const pb = priceFor(b, state.region);
-        const sa =
-          pa && pa.original != null && pa.final != null
-            ? pa.original - pa.final
-            : -1;
-        const sb =
-          pb && pb.original != null && pb.final != null
-            ? pb.original - pb.final
-            : -1;
-        return sb - sa;
-      });
-    } else {
-      arr.sort((a, b) => {
-        const pa = priceFor(a, state.region);
-        const pb = priceFor(b, state.region);
-        const va = pa && pa.final != null ? pa.final : Infinity;
-        const vb = pb && pb.final != null ? pb.final : Infinity;
-        return va - vb;
-      });
-    }
-    return arr;
-  }
+  loadMore: document.querySelector("#loadMore"),
 
-  function cardHtml(d, compact) {
-    const price = priceFor(d, state.region);
-    const img = bestImage(d);
-    const multi = multiLine(d, state.region);
-    const pop = isPopular(d);
-    let priceHtml;
-    if (price && price.final_formatted) {
-      priceHtml =
-        '<span class="price-now">' +
-        esc(price.final_formatted) +
-        '</span>' +
-        (price.original_formatted
-          ? '<span class="price-old">' + esc(price.original_formatted) + '</span>'
-          : '') +
-        (price._fb
-          ? '<span class="price-note">(' +
-            esc(price._fb.toUpperCase()) +
-            ')</span>'
-          : '');
-    } else {
-      priceHtml = '<span class="price-miss">цена: Steam</span>';
-    }
+  randomBtn: document.querySelector("#randomBtn"),
+  heroRandomBtn: document.querySelector("#heroRandomBtn"),
 
-    const media =
-      '<div class="card-media">' +
-      (img
-        ? '<img src="' +
-          esc(img) +
-          '" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/' +
-          d.appid +
-          '/capsule_616x353.jpg\'" />'
-        : '') +
-      (canHover
-        ? '<video muted loop playsinline preload="none" data-appid="' +
-          d.appid +
-          '"></video>'
-        : '') +
-      '<span class="badge">−' +
-      d.discount +
-      '%</span>' +
-      (pop ? '<span class="tag-pop">TOP</span>' : '') +
-      '</div>';
+  resetFilters: document.querySelector("#resetFilters"),
+  emptyReset: document.querySelector("#emptyReset"),
 
-    return (
-      '<a class="card' +
-      (pop ? ' card-pop' : '') +
-      '" href="' +
-      esc(d.url || 'https://store.steampowered.com/app/' + d.appid + '/') +
-      '" target="_blank" rel="noopener" data-appid="' +
-      d.appid +
-      '">' +
-      media +
-      '<div class="card-body"><h2 class="card-title">' +
-      esc(d.name || 'Без названия') +
-      '</h2><div class="price-row">' +
-      priceHtml +
-      '</div>' +
-      (!compact && multi
-        ? '<div class="multi">' + esc(multi) + '</div>'
-        : '') +
-      '</div></a>'
+  themeBtn: document.querySelector("#themeBtn"),
+  backTop: document.querySelector("#backTop"),
+  toast: document.querySelector("#toast")
+};
+
+
+function esc(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+
+function normalize(value) {
+  return String(value ?? "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+}
+
+
+function number(value, fallback = 0) {
+  const n = Number(value);
+  return Number.isFinite(n) ? n : fallback;
+}
+
+
+function getAppId(deal) {
+  return String(
+    deal.appid ??
+    deal.appId ??
+    deal.id ??
+    ""
+  );
+}
+
+
+function getName(deal) {
+  return (
+    deal.name ??
+    deal.title ??
+    "Без названия"
+  );
+}
+
+
+function getDiscount(deal) {
+  return number(
+    deal.discount_percent ??
+    deal.discountPercent ??
+    deal.discount ??
+    deal.percent ??
+    0
+  );
+}
+
+
+function getImage(deal) {
+  return (
+    deal.header ??
+    deal.header_image ??
+    deal.headerImage ??
+    deal.image ??
+    deal.capsule ??
+    `https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/${getAppId(deal)}/header.jpg`
+  );
+}
+
+
+function getOriginalPrice(deal) {
+  const region = state.region;
+
+  const prices =
+    deal.prices ??
+    deal.regions ??
+    deal.region_prices ??
+    {};
+
+  const regionData = prices?.[region];
+
+  if (regionData && typeof regionData === "object") {
+    return number(
+      regionData.initial ??
+      regionData.original ??
+      regionData.original_price ??
+      regionData.old_price ??
+      regionData.full ??
+      0
     );
   }
 
-  function bindTrailers(root) {
-    if (!canHover || !root) return;
-    root.querySelectorAll('.card').forEach((card) => {
-      const video = card.querySelector('video');
-      if (!video || video.dataset.bound) return;
-      video.dataset.bound = '1';
-      let loaded = false;
+  return number(
+    deal.initial_price ??
+    deal.initialPrice ??
+    deal.original_price ??
+    deal.originalPrice ??
+    0
+  );
+}
 
-      card.addEventListener('mouseenter', () => {
-        if (!loaded) {
-          loaded = true;
-          const appid = video.dataset.appid;
-          const urls = trailerUrls(appid);
-          let i = 0;
-          const tryNext = () => {
-            if (i >= urls.length) return;
-            video.src = urls[i++];
-            video.load();
-          };
-          video.addEventListener('error', tryNext);
-          video.addEventListener(
-            'loadeddata',
-            () => {
-              video.play().catch(() => {});
-            },
-            { once: true }
-          );
-          tryNext();
-        } else {
-          video.play().catch(() => {});
+
+function getFinalPrice(deal) {
+  const region = state.region;
+
+  const prices =
+    deal.prices ??
+    deal.regions ??
+    deal.region_prices ??
+    {};
+
+  const regionData = prices?.[region];
+
+  if (regionData && typeof regionData === "object") {
+    return number(
+      regionData.final ??
+      regionData.price ??
+      regionData.current ??
+      regionData.sale_price ??
+      0
+    );
+  }
+
+  return number(
+    deal.final_price ??
+    deal.finalPrice ??
+    deal.price ??
+    deal.current_price ??
+    0
+  );
+}
+
+
+function getSavings(deal) {
+  const original = getOriginalPrice(deal);
+  const current = getFinalPrice(deal);
+
+  if (original > current && current >= 0) {
+    return original - current;
+  }
+
+  return number(
+    deal.savings ??
+    deal.savings_amount ??
+    0
+  );
+}
+
+
+function formatPrice(value) {
+  const n = number(value);
+
+  if (n <= 0) {
+    return "Бесплатно";
+  }
+
+  const currencies = {
+    ru: "₽",
+    kz: "₸",
+    ua: "₴",
+    us: "$"
+  };
+
+  const currency = currencies[state.region] || "₽";
+
+  return `${new Intl.NumberFormat("ru-RU", {
+    maximumFractionDigits: 0
+  }).format(n)} ${currency}`;
+}
+
+
+function getStoreUrl(deal) {
+  if (deal.url) return deal.url;
+
+  const appid = getAppId(deal);
+
+  return appid
+    ? `https://store.steampowered.com/app/${encodeURIComponent(appid)}/`
+    : "https://store.steampowered.com/";
+}
+
+
+function getTrailer(deal) {
+  return (
+    deal.trailer ??
+    deal.trailer_url ??
+    deal.trailerUrl ??
+    deal.movies?.[0]?.mp4?.max ??
+    deal.movies?.[0]?.mp4?.["480"] ??
+    ""
+  );
+}
+
+
+function isPopular(deal) {
+  const id = getAppId(deal);
+
+  if (state.popular.has(id)) return true;
+
+  return getDiscount(deal) >= 70;
+}
+
+
+function hasPrice(deal) {
+  return getFinalPrice(deal) > 0 || getOriginalPrice(deal) > 0;
+}
+
+
+function saveState() {
+  localStorage.setItem("steamdeal-region", state.region);
+  localStorage.setItem("steamdeal-sort", state.sort);
+  localStorage.setItem("steamdeal-discount", String(state.minDiscount));
+  localStorage.setItem("steamdeal-popular", state.popularOnly ? "1" : "0");
+  localStorage.setItem("steamdeal-priced", state.pricedOnly ? "1" : "0");
+  localStorage.setItem(
+    "steamdeal-favorites",
+    JSON.stringify([...state.favorites])
+  );
+  localStorage.setItem("steamdeal-view", state.view);
+}
+
+
+function showToast(message) {
+  els.toast.textContent = message;
+  els.toast.classList.add("visible");
+
+  clearTimeout(showToast.timer);
+
+  showToast.timer = setTimeout(() => {
+    els.toast.classList.remove("visible");
+  }, 2200);
+}
+
+
+function setTheme() {
+  const saved = localStorage.getItem("steamdeal-theme");
+
+  if (saved === "light") {
+    document.body.classList.add("light-theme");
+  }
+}
+
+
+function toggleTheme() {
+  const light = document.body.classList.toggle("light-theme");
+
+  localStorage.setItem(
+    "steamdeal-theme",
+    light ? "light" : "dark"
+  );
+}
+
+
+function saveFavorites() {
+  localStorage.setItem(
+    "steamdeal-favorites",
+    JSON.stringify([...state.favorites])
+  );
+}
+
+
+function updateFavoritesCounter() {
+  els.favoritesCount.textContent = state.favorites.size;
+}
+
+
+function toggleFavorite(appid) {
+  const id = String(appid);
+
+  if (state.favorites.has(id)) {
+    state.favorites.delete(id);
+    showToast("Удалено из избранного");
+  } else {
+    state.favorites.add(id);
+    showToast("Добавлено в избранное");
+  }
+
+  saveFavorites();
+  updateFavoritesCounter();
+  renderCatalog();
+}
+
+
+function getCardMarkup(deal, compact = false) {
+  const appid = getAppId(deal);
+  const name = getName(deal);
+  const discount = Math.round(getDiscount(deal));
+
+  const original = getOriginalPrice(deal);
+  const finalPrice = getFinalPrice(deal);
+  const savings = getSavings(deal);
+
+  const image = getImage(deal);
+  const trailer = getTrailer(deal);
+
+  const popular = isPopular(deal);
+  const favorite = state.favorites.has(appid);
+
+  const storeUrl = getStoreUrl(deal);
+
+  const priceMarkup = finalPrice > 0
+    ? `
+      <div class="price-block">
+        ${original > finalPrice
+          ? `<span class="old-price">${esc(formatPrice(original))}</span>`
+          : ""
         }
-        card.classList.add('is-playing');
-      });
+        <strong>${esc(formatPrice(finalPrice))}</strong>
+      </div>
+    `
+    : `
+      <div class="price-block">
+        <strong class="free-price">Бесплатно</strong>
+      </div>
+    `;
 
-      card.addEventListener('mouseleave', () => {
-        card.classList.remove('is-playing');
-        try {
-          video.pause();
-          video.currentTime = 0;
-        } catch (_) {}
-      });
+  const savingsMarkup = savings > 0
+    ? `<span class="saving">−${esc(formatPrice(savings))}</span>`
+    : "";
+
+  const badges = `
+    ${discount > 0
+      ? `<span class="discount-badge">−${discount}%</span>`
+      : ""
+    }
+    ${popular
+      ? `<span class="popular-badge">★ Популярная</span>`
+      : ""
+    }
+  `;
+
+  return `
+    <article
+      class="deal-card ${compact ? "compact" : ""}"
+      data-appid="${esc(appid)}"
+      data-trailer="${esc(trailer)}"
+    >
+
+      <div class="card-media">
+        <a
+          href="${esc(storeUrl)}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-image-link"
+        >
+          <img
+            class="card-image"
+            src="${esc(image)}"
+            alt="${esc(name)}"
+            loading="lazy"
+          >
+
+          <span class="card-badges">
+            ${badges}
+          </span>
+        </a>
+
+        <button
+          class="favorite-button ${favorite ? "active" : ""}"
+          data-favorite="${esc(appid)}"
+          type="button"
+          aria-label="${favorite ? "Убрать из избранного" : "Добавить в избранное"}"
+        >
+          ${favorite ? "♥" : "♡"}
+        </button>
+
+        <div class="trailer-preview"></div>
+      </div>
+
+      <div class="card-content">
+
+        <div class="card-title-row">
+          <a
+            class="deal-title"
+            href="${esc(storeUrl)}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ${esc(name)}
+          </a>
+        </div>
+
+        <div class="card-bottom">
+          ${priceMarkup}
+          ${savingsMarkup}
+        </div>
+
+      </div>
+
+    </article>
+  `;
+}
+
+
+function getTopDeals() {
+  return [...state.deals]
+    .filter(deal => getDiscount(deal) > 0)
+    .sort((a, b) => {
+      const aScore =
+        getDiscount(a) * 1.25 +
+        Math.min(getSavings(a) / 100, 40) +
+        (isPopular(a) ? 18 : 0);
+
+      const bScore =
+        getDiscount(b) * 1.25 +
+        Math.min(getSavings(b) / 100, 40) +
+        (isPopular(b) ? 18 : 0);
+
+      return bScore - aScore;
+    })
+    .slice(0, 4);
+}
+
+
+function getFreeDeals() {
+  return state.deals
+    .filter(deal => {
+      const discount = getDiscount(deal);
+      const price = getFinalPrice(deal);
+
+      return price === 0 && discount >= 0;
+    })
+    .slice(0, 6);
+}
+
+
+function renderTop() {
+  const deals = getTopDeals();
+
+  if (!deals.length) {
+    els.topGrid.innerHTML = `
+      <div class="section-empty">
+        Пока нет данных для топа.
+      </div>
+    `;
+    return;
+  }
+
+  els.topGrid.innerHTML = deals
+    .map(deal => getCardMarkup(deal, true))
+    .join("");
+
+  bindCardEvents(els.topGrid);
+}
+
+
+function renderFree() {
+  const deals = getFreeDeals();
+
+  if (!deals.length) {
+    els.freeGrid.innerHTML = `
+      <div class="section-empty">
+        Бесплатных предложений сейчас не найдено.
+      </div>
+    `;
+    return;
+  }
+
+  els.freeGrid.innerHTML = deals
+    .map(deal => getCardMarkup(deal, true))
+    .join("");
+
+  bindCardEvents(els.freeGrid);
+}
+
+
+function applyFilters() {
+  const query = normalize(state.search);
+
+  let result = state.deals.filter(deal => {
+
+    const name = normalize(getName(deal));
+
+    if (query && !name.includes(query)) {
+      return false;
+    }
+
+    if (getDiscount(deal) < state.minDiscount) {
+      return false;
+    }
+
+    if (state.popularOnly && !isPopular(deal)) {
+      return false;
+    }
+
+    if (state.pricedOnly && !hasPrice(deal)) {
+      return false;
+    }
+
+    if (state.favoritesOnly && !state.favorites.has(getAppId(deal))) {
+      return false;
+    }
+
+    return true;
+  });
+
+
+  result.sort((a, b) => {
+
+    switch (state.sort) {
+
+      case "price":
+        return getFinalPrice(a) - getFinalPrice(b);
+
+      case "savings":
+        return getSavings(b) - getSavings(a);
+
+      case "name":
+        return getName(a).localeCompare(
+          getName(b),
+          "ru",
+          { sensitivity: "base" }
+        );
+
+      case "discount":
+      default:
+        return getDiscount(b) - getDiscount(a);
+    }
+
+  });
+
+
+  state.filtered = result;
+}
+
+
+function renderCatalog() {
+  applyFilters();
+
+  state.visible = Math.min(
+    Math.max(PAGE_SIZE, state.visible),
+    state.filtered.length
+  );
+
+  const visibleDeals = state.filtered.slice(0, state.visible);
+
+  els.dealGrid.classList.toggle(
+    "list-view",
+    state.view === "list"
+  );
+
+  els.dealGrid.innerHTML = visibleDeals
+    .map(deal => getCardMarkup(deal))
+    .join("");
+
+  const total = state.filtered.length;
+
+  if (state.favoritesOnly) {
+    els.resultsCount.textContent =
+      `${total} избранных ${plural(total, "игра", "игры", "игр")}`;
+  } else {
+    els.resultsCount.textContent =
+      `${total} ${plural(total, "предложение", "предложения", "предложений")}`;
+  }
+
+  els.emptyState.classList.toggle(
+    "hidden",
+    total !== 0
+  );
+
+  els.dealGrid.classList.toggle(
+    "hidden",
+    total === 0
+  );
+
+  els.loadMore.classList.toggle(
+    "hidden",
+    state.visible >= total || total === 0
+  );
+
+  bindCardEvents(els.dealGrid);
+
+  updateFavoritesCounter();
+}
+
+
+function plural(numberValue, one, few, many) {
+  const n = Math.abs(numberValue) % 100;
+  const n1 = n % 10;
+
+  if (n > 10 && n < 20) return many;
+  if (n1 > 1 && n1 < 5) return few;
+  if (n1 === 1) return one;
+
+  return many;
+}
+
+
+function bindCardEvents(container) {
+
+  container.querySelectorAll("[data-favorite]").forEach(button => {
+    button.addEventListener("click", event => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      toggleFavorite(button.dataset.favorite);
     });
-  }
+  });
 
-  function renderFree() {
-    if (!els.freeRow || !els.freeBlock) return;
-    const free = state.deals
-      .filter(isFree)
-      .sort((a, b) => String(a.name).localeCompare(String(b.name), 'ru'))
-      .slice(0, 8);
-    if (!free.length) {
-      els.freeBlock.hidden = true;
-      return;
-    }
-    els.freeBlock.hidden = false;
-    els.freeRow.innerHTML = free.map((d) => cardHtml(d, true)).join('');
-    bindTrailers(els.freeRow);
-  }
 
-  function render() {
-    const items = list();
-    const total = state.deals.length;
-    const popCount = state.deals.filter(isPopular).length;
+  container.querySelectorAll(".deal-card").forEach(card => {
 
-    if (els.count) {
-      els.count.textContent = items.length + ' / ' + total;
-    }
-    if (els.updated) els.updated.textContent = formatUpdated(state.updatedAt);
-    if (els.statsLine) {
-      els.statsLine.textContent =
-        total +
-        ' скидок · ' +
-        popCount +
-        ' из списка популярных · регион ' +
-        state.region.toUpperCase();
-    }
+    const trailer = card.dataset.trailer;
+    const preview = card.querySelector(".trailer-preview");
 
-    let topPool = state.deals.filter((d) => (d.discount || 0) >= 40);
-    if (state.popular.size) {
-      const pop = topPool.filter(isPopular);
-      if (pop.length >= 3) topPool = pop;
-    }
-    topPool = [...topPool].sort((a, b) => b.discount - a.discount).slice(0, 4);
-    if (els.topRow) {
-      els.topRow.innerHTML = topPool.map((d) => cardHtml(d, true)).join('');
-      bindTrailers(els.topRow);
-    }
+    if (!trailer || !preview) return;
 
-    renderFree();
+    let timer;
 
-    if (!items.length) {
-      els.grid.innerHTML = '';
-      if (els.moreBtn) els.moreBtn.hidden = true;
-      setStatus(
-        state.onlyPopular
-          ? 'Мало совпадений. Сними «Популярные / жирные» или снизь мин. %.'
-          : 'Ничего не найдено — ослабь фильтры.'
-      );
-      return;
-    }
-    setStatus('');
+    card.addEventListener("mouseenter", () => {
+      timer = setTimeout(() => {
 
-    const slice = items.slice(0, state.shown);
-    els.grid.innerHTML = slice.map((d) => cardHtml(d, false)).join('');
-    bindTrailers(els.grid);
+        if (preview.querySelector("video")) return;
 
-    if (els.moreBtn) {
-      const left = items.length - slice.length;
-      els.moreBtn.hidden = left <= 0;
-      els.moreBtn.textContent =
-        left > 0 ? 'Показать ещё (' + left + ')' : 'Всё';
-    }
-  }
+        const video = document.createElement("video");
 
-  function syncChips() {
-    if (!els.chips) return;
-    els.chips.querySelectorAll('.chip').forEach((btn) => {
-      btn.classList.toggle(
-        'active',
-        Number(btn.dataset.min) === state.minDiscount
-      );
+        video.src = trailer;
+        video.muted = true;
+        video.autoplay = true;
+        video.loop = true;
+        video.playsInline = true;
+
+        preview.appendChild(video);
+
+      }, 300);
     });
+
+    card.addEventListener("mouseleave", () => {
+      clearTimeout(timer);
+      preview.innerHTML = "";
+    });
+
+  });
+}
+
+
+function syncControls() {
+  els.regionSelect.value = state.region;
+  els.sortSelect.value = state.sort;
+
+  els.discountRange.value = state.minDiscount;
+  els.discountValue.textContent = state.minDiscount;
+
+  els.popularOnly.checked = state.popularOnly;
+  els.pricedOnly.checked = state.pricedOnly;
+
+  document.querySelectorAll(".quick-filter").forEach(button => {
+    button.classList.toggle(
+      "active",
+      Number(button.dataset.discount) === state.minDiscount
+    );
+  });
+
+  document.querySelectorAll(".view-button").forEach(button => {
+    button.classList.toggle(
+      "active",
+      button.dataset.view === state.view
+    );
+  });
+
+  els.favoritesToggle.classList.toggle(
+    "active",
+    state.favoritesOnly
+  );
+}
+
+
+function refresh() {
+  saveState();
+  syncControls();
+  renderCatalog();
+}
+
+
+function resetFilters() {
+  state.search = "";
+  state.minDiscount = 0;
+  state.popularOnly = false;
+  state.pricedOnly = false;
+  state.favoritesOnly = false;
+  state.sort = "discount";
+
+  els.searchInput.value = "";
+
+  refresh();
+}
+
+
+function randomDeal() {
+  const pool = state.filtered.length
+    ? state.filtered
+    : state.deals;
+
+  if (!pool.length) return;
+
+  const deal = pool[
+    Math.floor(Math.random() * pool.length)
+  ];
+
+  const url = getStoreUrl(deal);
+
+  window.open(
+    url,
+    "_blank",
+    "noopener,noreferrer"
+  );
+
+  showToast(`Открываем: ${getName(deal)}`);
+}
+
+
+async function loadPopular() {
+  try {
+    const response = await fetch(POPULAR_URL, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) return;
+
+    const data = await response.json();
+
+    const ids = Array.isArray(data)
+      ? data
+      : Array.isArray(data?.appids)
+        ? data.appids
+        : [];
+
+    state.popular = new Set(ids.map(String));
+
+  } catch {
+    state.popular = new Set();
   }
+}
 
-  function persist() {
-    localStorage.setItem('sd_region', state.region);
-    localStorage.setItem('sd_sort', state.sort);
-    localStorage.setItem('sd_min', String(state.minDiscount));
-    localStorage.setItem('sd_priced', state.onlyPriced ? '1' : '0');
-    localStorage.setItem('sd_popular', state.onlyPopular ? '1' : '0');
-  }
 
-  async function load() {
-    setStatus('Загрузка…');
-    try {
-      const [dealsRes, popRes] = await Promise.all([
-        fetch('data/deals.json?t=' + Date.now(), { cache: 'no-store' }),
-        fetch('data/popular.json?t=' + Date.now(), { cache: 'no-store' }).catch(
-          () => null
-        )
-      ]);
-      if (!dealsRes.ok) throw new Error('HTTP ' + dealsRes.status);
-      const data = await dealsRes.json();
-      state.deals = Array.isArray(data.deals) ? data.deals : [];
-      state.updatedAt = data.updated_at || null;
+async function loadDeals() {
 
-      if (popRes && popRes.ok) {
-        const pop = await popRes.json();
-        const ids = pop.appids || pop.ids || [];
-        state.popular = new Set(ids.map(Number));
+  try {
+
+    const response = await fetch(DATA_URL, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (Array.isArray(data)) {
+      state.deals = data;
+    } else if (Array.isArray(data?.deals)) {
+      state.deals = data.deals;
+    } else if (Array.isArray(data?.items)) {
+      state.deals = data.items;
+    } else {
+      throw new Error("Неизвестный формат deals.json");
+    }
+
+
+    els.heroCount.textContent =
+      state.deals.length.toLocaleString("ru-RU");
+
+
+    const updated =
+      data?.updated_at ??
+      data?.updatedAt ??
+      data?.generated_at ??
+      data?.generatedAt ??
+      null;
+
+
+    if (updated) {
+      const date = new Date(updated);
+
+      if (!Number.isNaN(date.getTime())) {
+        els.heroUpdated.textContent =
+          date.toLocaleDateString("ru-RU", {
+            day: "2-digit",
+            month: "2-digit"
+          });
       }
-      state.shown = state.pageSize;
-      render();
-    } catch (e) {
-      console.error(e);
-      setStatus('Не удалось загрузить данные. Проверь GitHub Pages.', true);
     }
+
+
+    renderTop();
+    renderFree();
+    renderCatalog();
+
+  } catch (error) {
+
+    console.error(error);
+
+    els.heroCount.textContent = "—";
+    els.resultsCount.textContent = "Ошибка загрузки";
+
+    els.dealGrid.innerHTML = `
+      <div class="error-state">
+        <div class="empty-icon">!</div>
+        <h3>Не удалось загрузить скидки</h3>
+        <p>
+          Проверь подключение к интернету или попробуй
+          обновить страницу чуть позже.
+        </p>
+        <button class="secondary-button" onclick="location.reload()">
+          Обновить
+        </button>
+      </div>
+    `;
+
   }
 
-  els.search.addEventListener('input', () => {
-    state.query = els.search.value;
-    state.shown = state.pageSize;
-    render();
-  });
-  els.region.addEventListener('change', () => {
-    state.region = els.region.value;
-    persist();
-    render();
-  });
-  els.sort.addEventListener('change', () => {
-    state.sort = els.sort.value;
-    persist();
-    render();
-  });
-  els.minDiscount.addEventListener('change', () => {
-    state.minDiscount = Number(els.minDiscount.value) || 0;
-    state.shown = state.pageSize;
-    persist();
-    syncChips();
-    render();
-  });
-  els.onlyPriced.addEventListener('change', () => {
-    state.onlyPriced = els.onlyPriced.checked;
-    persist();
-    render();
-  });
-  if (els.onlyPopular) {
-    els.onlyPopular.addEventListener('change', () => {
-      state.onlyPopular = els.onlyPopular.checked;
-      state.shown = state.pageSize;
-      persist();
-      render();
-    });
-  }
-  els.chips.addEventListener('click', (e) => {
-    const btn = e.target.closest('.chip');
-    if (!btn) return;
-    state.minDiscount = Number(btn.dataset.min) || 0;
-    els.minDiscount.value = String(state.minDiscount);
-    state.shown = state.pageSize;
-    persist();
-    syncChips();
-    render();
-  });
-  if (els.moreBtn) {
-    els.moreBtn.addEventListener('click', () => {
-      state.shown += state.pageSize;
-      render();
-    });
-  }
+}
 
-  syncChips();
-  load();
-})();
+
+function initEvents() {
+
+  els.searchInput.addEventListener("input", event => {
+    state.search = event.target.value;
+    state.visible = PAGE_SIZE;
+    renderCatalog();
+  });
+
+
+  els.regionSelect.addEventListener("change", event => {
+    state.region = event.target.value;
+    state.visible = PAGE_SIZE;
+
+    saveState();
+
+    renderTop();
+    renderFree();
+    renderCatalog();
+  });
+
+
+  els.sortSelect.addEventListener("change", event => {
+    state.sort = event.target.value;
+    state.visible = PAGE_SIZE;
+
+    refresh();
+  });
+
+
+  els.discountRange.addEventListener("input", event => {
+    state.minDiscount = Number(event.target.value);
+    state.visible = PAGE_SIZE;
+
+    refresh();
+  });
+
+
+  document.querySelectorAll(".quick-filter").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      state.minDiscount =
+        Number(button.dataset.discount);
+
+      state.visible = PAGE_SIZE;
+
+      refresh();
+
+    });
+
+  });
+
+
+  els.popularOnly.addEventListener("change", event => {
+    state.popularOnly = event.target.checked;
+    state.visible = PAGE_SIZE;
+
+    refresh();
+  });
+
+
+  els.pricedOnly.addEventListener("change", event => {
+    state.pricedOnly = event.target.checked;
+    state.visible = PAGE_SIZE;
+
+    refresh();
+  });
+
+
+  els.favoritesToggle.addEventListener("click", () => {
+
+    state.favoritesOnly = !state.favoritesOnly;
+    state.visible = PAGE_SIZE;
+
+    refresh();
+
+  });
+
+
+  document.querySelectorAll(".view-button").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      state.view = button.dataset.view;
+
+      refresh();
+
+    });
+
+  });
+
+
+  els.loadMore.addEventListener("click", () => {
+
+    state.visible += PAGE_SIZE;
+
+    renderCatalog();
+
+  });
+
+
+  els.resetFilters.addEventListener(
+    "click",
+    resetFilters
+  );
+
+  els.emptyReset.addEventListener(
+    "click",
+    resetFilters
+  );
+
+
+  els.randomBtn.addEventListener(
+    "click",
+    randomDeal
+  );
+
+  els.heroRandomBtn.addEventListener(
+    "click",
+    randomDeal
+  );
+
+
+  els.themeBtn.addEventListener(
+    "click",
+    toggleTheme
+  );
+
+
+  document.addEventListener("keydown", event => {
+
+    if (
+      event.key === "/" &&
+      document.activeElement !== els.searchInput &&
+      !event.ctrlKey 
