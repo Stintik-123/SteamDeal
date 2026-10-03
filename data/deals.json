@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T10:42:56.145Z",
+  "updated_at": "2026-10-03T15:17:24.487Z",
   "source": "steam_search_specials+featuredcategories+appdetails",
   "regions": [
     "ru",
@@ -7,7 +7,7 @@
     "kz",
     "ua"
   ],
-  "count": 295,
+  "count": 296,
   "deals": [
     {
       "appid": 673880,
@@ -268,6 +268,49 @@
       }
     },
     {
+      "appid": 2475460,
+      "name": "SOS OPS!",
+      "discount": 91,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2475460/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2475460/header.jpg",
+      "url": "https://store.steampowered.com/app/2475460/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 2900,
+          "original": 29900,
+          "final_formatted": "29 руб.",
+          "original_formatted": "299 руб.",
+          "discount": 90
+        },
+        "us": {
+          "currency": "USD",
+          "final": 49,
+          "original": 499,
+          "final_formatted": "$0.49",
+          "original_formatted": "$4.99",
+          "discount": 90
+        },
+        "kz": {
+          "currency": "KZT",
+          "final": 24900,
+          "original": 249900,
+          "final_formatted": "249₸",
+          "original_formatted": "2 499₸",
+          "discount": 90
+        },
+        "ua": {
+          "currency": "UAH",
+          "final": 1400,
+          "original": 14900,
+          "final_formatted": "14₴",
+          "original_formatted": "149₴",
+          "discount": 91
+        }
+      }
+    },
+    {
       "appid": 701160,
       "name": "Kingdom Two Crowns",
       "discount": 90,
@@ -354,92 +397,6 @@
       }
     },
     {
-      "appid": 835960,
-      "name": "The Talos Principle 2",
-      "discount": 90,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/835960/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/835960/header.jpg",
-      "url": "https://store.steampowered.com/app/835960/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 11000,
-          "original": 110000,
-          "final_formatted": "110 руб.",
-          "original_formatted": "1100 руб.",
-          "discount": 90
-        },
-        "us": {
-          "currency": "USD",
-          "final": 299,
-          "original": 2999,
-          "final_formatted": "$2.99",
-          "original_formatted": "$29.99",
-          "discount": 90
-        },
-        "kz": {
-          "currency": "KZT",
-          "final": 76000,
-          "original": 760000,
-          "final_formatted": "760₸",
-          "original_formatted": "7 600₸",
-          "discount": 90
-        },
-        "ua": {
-          "currency": "UAH",
-          "final": 6000,
-          "original": 60000,
-          "final_formatted": "60₴",
-          "original_formatted": "600₴",
-          "discount": 90
-        }
-      }
-    },
-    {
-      "appid": 2475460,
-      "name": "SOS OPS!",
-      "discount": 91,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2475460/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2475460/header.jpg",
-      "url": "https://store.steampowered.com/app/2475460/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 2900,
-          "original": 29900,
-          "final_formatted": "29 руб.",
-          "original_formatted": "299 руб.",
-          "discount": 90
-        },
-        "us": {
-          "currency": "USD",
-          "final": 49,
-          "original": 499,
-          "final_formatted": "$0.49",
-          "original_formatted": "$4.99",
-          "discount": 90
-        },
-        "kz": {
-          "currency": "KZT",
-          "final": 24900,
-          "original": 249900,
-          "final_formatted": "249₸",
-          "original_formatted": "2 499₸",
-          "discount": 90
-        },
-        "ua": {
-          "currency": "UAH",
-          "final": 1400,
-          "original": 14900,
-          "final_formatted": "14₴",
-          "original_formatted": "149₴",
-          "discount": 91
-        }
-      }
-    },
-    {
       "appid": 894020,
       "name": "Death's Door",
       "discount": 90,
@@ -478,6 +435,49 @@
           "original": 41500,
           "final_formatted": "41₴",
           "original_formatted": "415₴",
+          "discount": 90
+        }
+      }
+    },
+    {
+      "appid": 835960,
+      "name": "The Talos Principle 2",
+      "discount": 90,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/835960/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/835960/header.jpg",
+      "url": "https://store.steampowered.com/app/835960/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 11000,
+          "original": 110000,
+          "final_formatted": "110 руб.",
+          "original_formatted": "1100 руб.",
+          "discount": 90
+        },
+        "us": {
+          "currency": "USD",
+          "final": 299,
+          "original": 2999,
+          "final_formatted": "$2.99",
+          "original_formatted": "$29.99",
+          "discount": 90
+        },
+        "kz": {
+          "currency": "KZT",
+          "final": 76000,
+          "original": 760000,
+          "final_formatted": "760₸",
+          "original_formatted": "7 600₸",
+          "discount": 90
+        },
+        "ua": {
+          "currency": "UAH",
+          "final": 6000,
+          "original": 60000,
+          "final_formatted": "60₴",
+          "original_formatted": "600₴",
           "discount": 90
         }
       }
@@ -526,45 +526,45 @@
       }
     },
     {
-      "appid": 1096530,
-      "name": "Solasta: Crown of the Magister",
-      "discount": 90,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1096530/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1096530/header.jpg",
-      "url": "https://store.steampowered.com/app/1096530/",
+      "appid": 582660,
+      "name": "Black Desert",
+      "discount": 91,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582660/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582660/header.jpg",
+      "url": "https://store.steampowered.com/app/582660/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 11000,
-          "original": 110000,
-          "final_formatted": "110 руб.",
-          "original_formatted": "1100 руб.",
+          "final": 3500,
+          "original": 35000,
+          "final_formatted": "35 руб.",
+          "original_formatted": "350 руб.",
           "discount": 90
         },
         "us": {
           "currency": "USD",
-          "final": 299,
-          "original": 2999,
-          "final_formatted": "$2.99",
-          "original_formatted": "$29.99",
+          "final": 99,
+          "original": 999,
+          "final_formatted": "$0.99",
+          "original_formatted": "$9.99",
           "discount": 90
         },
         "kz": {
           "currency": "KZT",
-          "final": 76000,
-          "original": 760000,
-          "final_formatted": "760₸",
-          "original_formatted": "7 600₸",
+          "final": 19000,
+          "original": 190000,
+          "final_formatted": "190₸",
+          "original_formatted": "1 900₸",
           "discount": 90
         },
         "ua": {
           "currency": "UAH",
-          "final": 6000,
-          "original": 60000,
-          "final_formatted": "60₴",
-          "original_formatted": "600₴",
-          "discount": 90
+          "final": 1400,
+          "original": 14900,
+          "final_formatted": "14₴",
+          "original_formatted": "149₴",
+          "discount": 91
         }
       }
     },
@@ -612,45 +612,45 @@
       }
     },
     {
-      "appid": 582660,
-      "name": "Black Desert",
-      "discount": 91,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582660/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582660/header.jpg",
-      "url": "https://store.steampowered.com/app/582660/",
+      "appid": 1096530,
+      "name": "Solasta: Crown of the Magister",
+      "discount": 90,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1096530/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1096530/header.jpg",
+      "url": "https://store.steampowered.com/app/1096530/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 3500,
-          "original": 35000,
-          "final_formatted": "35 руб.",
-          "original_formatted": "350 руб.",
+          "final": 11000,
+          "original": 110000,
+          "final_formatted": "110 руб.",
+          "original_formatted": "1100 руб.",
           "discount": 90
         },
         "us": {
           "currency": "USD",
-          "final": 99,
-          "original": 999,
-          "final_formatted": "$0.99",
-          "original_formatted": "$9.99",
+          "final": 299,
+          "original": 2999,
+          "final_formatted": "$2.99",
+          "original_formatted": "$29.99",
           "discount": 90
         },
         "kz": {
           "currency": "KZT",
-          "final": 19000,
-          "original": 190000,
-          "final_formatted": "190₸",
-          "original_formatted": "1 900₸",
+          "final": 76000,
+          "original": 760000,
+          "final_formatted": "760₸",
+          "original_formatted": "7 600₸",
           "discount": 90
         },
         "ua": {
           "currency": "UAH",
-          "final": 1400,
-          "original": 14900,
-          "final_formatted": "14₴",
-          "original_formatted": "149₴",
-          "discount": 91
+          "final": 6000,
+          "original": 60000,
+          "final_formatted": "60₴",
+          "original_formatted": "600₴",
+          "discount": 90
         }
       }
     },
@@ -784,49 +784,6 @@
       }
     },
     {
-      "appid": 552500,
-      "name": "Warhammer: Vermintide 2",
-      "discount": 90,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552500/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552500/header.jpg",
-      "url": "https://store.steampowered.com/app/552500/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 14900,
-          "original": 149900,
-          "final_formatted": "149 руб.",
-          "original_formatted": "1499 руб.",
-          "discount": 90
-        },
-        "us": {
-          "currency": "USD",
-          "final": 299,
-          "original": 2999,
-          "final_formatted": "$2.99",
-          "original_formatted": "$29.99",
-          "discount": 90
-        },
-        "kz": {
-          "currency": "KZT",
-          "final": 76000,
-          "original": 760000,
-          "final_formatted": "760₸",
-          "original_formatted": "7 600₸",
-          "discount": 90
-        },
-        "ua": {
-          "currency": "UAH",
-          "final": 3700,
-          "original": 37900,
-          "final_formatted": "37₴",
-          "original_formatted": "379₴",
-          "discount": 90
-        }
-      }
-    },
-    {
       "appid": 210970,
       "name": "The Witness",
       "discount": 90,
@@ -865,6 +822,92 @@
           "original": 47900,
           "final_formatted": "47₴",
           "original_formatted": "479₴",
+          "discount": 90
+        }
+      }
+    },
+    {
+      "appid": 3518320,
+      "name": "The Outlast Trials - Sweet Release Pack",
+      "discount": 90,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3518320/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3518320/header.jpg",
+      "url": "https://store.steampowered.com/app/3518320/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 7100,
+          "original": 71000,
+          "final_formatted": "71 руб.",
+          "original_formatted": "710 руб.",
+          "discount": 90
+        },
+        "us": {
+          "currency": "USD",
+          "final": 199,
+          "original": 1999,
+          "final_formatted": "$1.99",
+          "original_formatted": "$19.99",
+          "discount": 90
+        },
+        "kz": {
+          "currency": "KZT",
+          "final": 52000,
+          "original": 520000,
+          "final_formatted": "520₸",
+          "original_formatted": "5 200₸",
+          "discount": 90
+        },
+        "ua": {
+          "currency": "UAH",
+          "final": 4100,
+          "original": 41500,
+          "final_formatted": "41₴",
+          "original_formatted": "415₴",
+          "discount": 90
+        }
+      }
+    },
+    {
+      "appid": 552500,
+      "name": "Warhammer: Vermintide 2",
+      "discount": 90,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552500/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552500/header.jpg",
+      "url": "https://store.steampowered.com/app/552500/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 14900,
+          "original": 149900,
+          "final_formatted": "149 руб.",
+          "original_formatted": "1499 руб.",
+          "discount": 90
+        },
+        "us": {
+          "currency": "USD",
+          "final": 299,
+          "original": 2999,
+          "final_formatted": "$2.99",
+          "original_formatted": "$29.99",
+          "discount": 90
+        },
+        "kz": {
+          "currency": "KZT",
+          "final": 76000,
+          "original": 760000,
+          "final_formatted": "760₸",
+          "original_formatted": "7 600₸",
+          "discount": 90
+        },
+        "ua": {
+          "currency": "UAH",
+          "final": 3700,
+          "original": 37900,
+          "final_formatted": "37₴",
+          "original_formatted": "379₴",
           "discount": 90
         }
       }
@@ -1085,49 +1128,6 @@
       }
     },
     {
-      "appid": 274170,
-      "name": "Hotline Miami 2: Wrong Number",
-      "discount": 85,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/274170/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/274170/header.jpg",
-      "url": "https://store.steampowered.com/app/274170/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 8200,
-          "original": 55000,
-          "final_formatted": "82 руб.",
-          "original_formatted": "550 руб.",
-          "discount": 85
-        },
-        "us": {
-          "currency": "USD",
-          "final": 224,
-          "original": 1499,
-          "final_formatted": "$2.24",
-          "original_formatted": "$14.99",
-          "discount": 85
-        },
-        "kz": {
-          "currency": "KZT",
-          "final": 61500,
-          "original": 410000,
-          "final_formatted": "615₸",
-          "original_formatted": "4 100₸",
-          "discount": 85
-        },
-        "ua": {
-          "currency": "UAH",
-          "final": 4800,
-          "original": 32500,
-          "final_formatted": "48₴",
-          "original_formatted": "325₴",
-          "discount": 85
-        }
-      }
-    },
-    {
       "appid": 617290,
       "name": "Remnant: From the Ashes",
       "discount": 85,
@@ -1171,6 +1171,49 @@
       }
     },
     {
+      "appid": 274170,
+      "name": "Hotline Miami 2: Wrong Number",
+      "discount": 85,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/274170/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/274170/header.jpg",
+      "url": "https://store.steampowered.com/app/274170/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 8200,
+          "original": 55000,
+          "final_formatted": "82 руб.",
+          "original_formatted": "550 руб.",
+          "discount": 85
+        },
+        "us": {
+          "currency": "USD",
+          "final": 224,
+          "original": 1499,
+          "final_formatted": "$2.24",
+          "original_formatted": "$14.99",
+          "discount": 85
+        },
+        "kz": {
+          "currency": "KZT",
+          "final": 61500,
+          "original": 410000,
+          "final_formatted": "615₸",
+          "original_formatted": "4 100₸",
+          "discount": 85
+        },
+        "ua": {
+          "currency": "UAH",
+          "final": 4800,
+          "original": 32500,
+          "final_formatted": "48₴",
+          "original_formatted": "325₴",
+          "discount": 85
+        }
+      }
+    },
+    {
       "appid": 1066780,
       "name": "Transport Fever 2",
       "discount": 85,
@@ -1209,49 +1252,6 @@
           "original": 74000,
           "final_formatted": "111₴",
           "original_formatted": "740₴",
-          "discount": 85
-        }
-      }
-    },
-    {
-      "appid": 257510,
-      "name": "The Talos Principle",
-      "discount": 85,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257510/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257510/header.jpg",
-      "url": "https://store.steampowered.com/app/257510/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 16500,
-          "original": 110000,
-          "final_formatted": "165 руб.",
-          "original_formatted": "1100 руб.",
-          "discount": 85
-        },
-        "us": {
-          "currency": "USD",
-          "final": 449,
-          "original": 2999,
-          "final_formatted": "$4.49",
-          "original_formatted": "$29.99",
-          "discount": 85
-        },
-        "kz": {
-          "currency": "KZT",
-          "final": 114000,
-          "original": 760000,
-          "final_formatted": "1 140₸",
-          "original_formatted": "7 600₸",
-          "discount": 85
-        },
-        "ua": {
-          "currency": "UAH",
-          "final": 9000,
-          "original": 60000,
-          "final_formatted": "90₴",
-          "original_formatted": "600₴",
           "discount": 85
         }
       }
@@ -1472,6 +1472,49 @@
       }
     },
     {
+      "appid": 246620,
+      "name": "Plague Inc: Evolved",
+      "discount": 80,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/246620/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/246620/header.jpg",
+      "url": "https://store.steampowered.com/app/246620/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 11000,
+          "original": 55000,
+          "final_formatted": "110 руб.",
+          "original_formatted": "550 руб.",
+          "discount": 80
+        },
+        "us": {
+          "currency": "USD",
+          "final": 299,
+          "original": 1499,
+          "final_formatted": "$2.99",
+          "original_formatted": "$14.99",
+          "discount": 80
+        },
+        "kz": {
+          "currency": "KZT",
+          "final": 82000,
+          "original": 410000,
+          "final_formatted": "820₸",
+          "original_formatted": "4 100₸",
+          "discount": 80
+        },
+        "ua": {
+          "currency": "UAH",
+          "final": 6500,
+          "original": 32500,
+          "final_formatted": "65₴",
+          "original_formatted": "325₴",
+          "discount": 80
+        }
+      }
+    },
+    {
       "appid": 392160,
       "name": "X4: Foundations",
       "discount": 80,
@@ -1515,49 +1558,6 @@
       }
     },
     {
-      "appid": 1119730,
-      "name": "Ranch Simulator: Build, Hunt, Farm",
-      "discount": 80,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1119730/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1119730/header.jpg",
-      "url": "https://store.steampowered.com/app/1119730/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 9300,
-          "original": 46500,
-          "final_formatted": "93 руб.",
-          "original_formatted": "465 руб.",
-          "discount": 80
-        },
-        "us": {
-          "currency": "USD",
-          "final": 499,
-          "original": 2499,
-          "final_formatted": "$4.99",
-          "original_formatted": "$24.99",
-          "discount": 80
-        },
-        "kz": {
-          "currency": "KZT",
-          "final": 66000,
-          "original": 330000,
-          "final_formatted": "660₸",
-          "original_formatted": "3 300₸",
-          "discount": 80
-        },
-        "ua": {
-          "currency": "UAH",
-          "final": 6500,
-          "original": 32900,
-          "final_formatted": "65₴",
-          "original_formatted": "329₴",
-          "discount": 80
-        }
-      }
-    },
-    {
       "appid": 675010,
       "name": "MudRunner",
       "discount": 80,
@@ -1596,6 +1596,49 @@
           "original": 46900,
           "final_formatted": "93₴",
           "original_formatted": "469₴",
+          "discount": 80
+        }
+      }
+    },
+    {
+      "appid": 1119730,
+      "name": "Ranch Simulator: Build, Hunt, Farm",
+      "discount": 80,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1119730/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1119730/header.jpg",
+      "url": "https://store.steampowered.com/app/1119730/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 9300,
+          "original": 46500,
+          "final_formatted": "93 руб.",
+          "original_formatted": "465 руб.",
+          "discount": 80
+        },
+        "us": {
+          "currency": "USD",
+          "final": 499,
+          "original": 2499,
+          "final_formatted": "$4.99",
+          "original_formatted": "$24.99",
+          "discount": 80
+        },
+        "kz": {
+          "currency": "KZT",
+          "final": 66000,
+          "original": 330000,
+          "final_formatted": "660₸",
+          "original_formatted": "3 300₸",
+          "discount": 80
+        },
+        "ua": {
+          "currency": "UAH",
+          "final": 6500,
+          "original": 32900,
+          "final_formatted": "65₴",
+          "original_formatted": "329₴",
           "discount": 80
         }
       }
@@ -1687,44 +1730,44 @@
       }
     },
     {
-      "appid": 246620,
-      "name": "Plague Inc: Evolved",
+      "appid": 1184370,
+      "name": "Pathfinder: Wrath of the Righteous - Enhanced Edition",
       "discount": 80,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/246620/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/246620/header.jpg",
-      "url": "https://store.steampowered.com/app/246620/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1184370/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1184370/header.jpg",
+      "url": "https://store.steampowered.com/app/1184370/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 11000,
-          "original": 55000,
-          "final_formatted": "110 руб.",
-          "original_formatted": "550 руб.",
+          "final": 11900,
+          "original": 59900,
+          "final_formatted": "119 руб.",
+          "original_formatted": "599 руб.",
           "discount": 80
         },
         "us": {
           "currency": "USD",
-          "final": 299,
-          "original": 1499,
-          "final_formatted": "$2.99",
-          "original_formatted": "$14.99",
+          "final": 399,
+          "original": 1999,
+          "final_formatted": "$3.99",
+          "original_formatted": "$19.99",
           "discount": 80
         },
         "kz": {
           "currency": "KZT",
-          "final": 82000,
-          "original": 410000,
-          "final_formatted": "820₸",
-          "original_formatted": "4 100₸",
+          "final": 79900,
+          "original": 399900,
+          "final_formatted": "799₸",
+          "original_formatted": "3 999₸",
           "discount": 80
         },
         "ua": {
           "currency": "UAH",
-          "final": 6500,
-          "original": 32500,
-          "final_formatted": "65₴",
-          "original_formatted": "325₴",
+          "final": 5900,
+          "original": 29900,
+          "final_formatted": "59₴",
+          "original_formatted": "299₴",
           "discount": 80
         }
       }
@@ -1816,49 +1859,6 @@
       }
     },
     {
-      "appid": 1184370,
-      "name": "Pathfinder: Wrath of the Righteous - Enhanced Edition",
-      "discount": 80,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1184370/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1184370/header.jpg",
-      "url": "https://store.steampowered.com/app/1184370/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 11900,
-          "original": 59900,
-          "final_formatted": "119 руб.",
-          "original_formatted": "599 руб.",
-          "discount": 80
-        },
-        "us": {
-          "currency": "USD",
-          "final": 399,
-          "original": 1999,
-          "final_formatted": "$3.99",
-          "original_formatted": "$19.99",
-          "discount": 80
-        },
-        "kz": {
-          "currency": "KZT",
-          "final": 79900,
-          "original": 399900,
-          "final_formatted": "799₸",
-          "original_formatted": "3 999₸",
-          "discount": 80
-        },
-        "ua": {
-          "currency": "UAH",
-          "final": 5900,
-          "original": 29900,
-          "final_formatted": "59₴",
-          "original_formatted": "299₴",
-          "discount": 80
-        }
-      }
-    },
-    {
       "appid": 521890,
       "name": "Hello Neighbor",
       "discount": 80,
@@ -1940,49 +1940,6 @@
           "original": 47900,
           "final_formatted": "95₴",
           "original_formatted": "479₴",
-          "discount": 80
-        }
-      }
-    },
-    {
-      "appid": 954740,
-      "name": "Terminator: Resistance",
-      "discount": 80,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954740/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954740/header.jpg",
-      "url": "https://store.steampowered.com/app/954740/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 27900,
-          "original": 139900,
-          "final_formatted": "279 руб.",
-          "original_formatted": "1399 руб.",
-          "discount": 80
-        },
-        "us": {
-          "currency": "USD",
-          "final": 799,
-          "original": 3999,
-          "final_formatted": "$7.99",
-          "original_formatted": "$39.99",
-          "discount": 80
-        },
-        "kz": {
-          "currency": "KZT",
-          "final": 145600,
-          "original": 728400,
-          "final_formatted": "1 456₸",
-          "original_formatted": "7 284₸",
-          "discount": 80
-        },
-        "ua": {
-          "currency": "UAH",
-          "final": 9400,
-          "original": 47200,
-          "final_formatted": "94₴",
-          "original_formatted": "472₴",
           "discount": 80
         }
       }
@@ -2339,6 +2296,22 @@
           "final_formatted": "$7.49",
           "original_formatted": "$29.99",
           "discount": 75
+        },
+        "kz": {
+          "currency": "KZT",
+          "final": 244200,
+          "original": 977000,
+          "final_formatted": "2 442₸",
+          "original_formatted": "9 770₸",
+          "discount": 75
+        },
+        "ua": {
+          "currency": "UAH",
+          "final": 19900,
+          "original": 79900,
+          "final_formatted": "199₴",
+          "original_formatted": "799₴",
+          "discount": 75
         }
       }
     },
@@ -2354,9 +2327,34 @@
         "ru": {
           "currency": "RUB",
           "final": 82400,
-          "original": 329600,
-          "final_formatted": "824 ₽",
-          "original_formatted": "3296 ₽"
+          "original": 329900,
+          "final_formatted": "824 руб.",
+          "original_formatted": "3299 руб.",
+          "discount": 75
+        },
+        "us": {
+          "currency": "USD",
+          "final": 999,
+          "original": 3999,
+          "final_formatted": "$9.99",
+          "original_formatted": "$39.99",
+          "discount": 75
+        },
+        "kz": {
+          "currency": "KZT",
+          "final": 387500,
+          "original": 1550000,
+          "final_formatted": "3 875₸",
+          "original_formatted": "15 500₸",
+          "discount": 75
+        },
+        "ua": {
+          "currency": "UAH",
+          "final": 29900,
+          "original": 119900,
+          "final_formatted": "299₴",
+          "original_formatted": "1 199₴",
+          "discount": 75
         }
       }
     },
@@ -2372,9 +2370,34 @@
         "ru": {
           "currency": "RUB",
           "final": 68700,
-          "original": 274800,
-          "final_formatted": "687 ₽",
-          "original_formatted": "2748 ₽"
+          "original": 274900,
+          "final_formatted": "687 руб.",
+          "original_formatted": "2749 руб.",
+          "discount": 75
+        },
+        "us": {
+          "currency": "USD",
+          "final": 999,
+          "original": 3999,
+          "final_formatted": "$9.99",
+          "original_formatted": "$39.99",
+          "discount": 75
+        },
+        "kz": {
+          "currency": "KZT",
+          "final": 324900,
+          "original": 1299900,
+          "final_formatted": "3 249₸",
+          "original_formatted": "12 999₸",
+          "discount": 75
+        },
+        "ua": {
+          "currency": "UAH",
+          "final": 18900,
+          "original": 75900,
+          "final_formatted": "189₴",
+          "original_formatted": "759₴",
+          "discount": 75
         }
       }
     },
@@ -2390,27 +2413,18 @@
         "ru": {
           "currency": "RUB",
           "final": 13700,
-          "original": 54800,
-          "final_formatted": "137 ₽",
-          "original_formatted": "548 ₽"
-        }
-      }
-    },
-    {
-      "appid": 107410,
-      "name": "Arma 3",
-      "discount": 75,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/107410/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/107410/header.jpg",
-      "url": "https://store.steampowered.com/app/107410/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 42200,
-          "original": 168800,
-          "final_formatted": "422 ₽",
-          "original_formatted": "1688 ₽"
+          "original": 55000,
+          "final_formatted": "137 руб.",
+          "original_formatted": "550 руб.",
+          "discount": 75
+        },
+        "us": {
+          "currency": "USD",
+          "final": 374,
+          "original": 1499,
+          "final_formatted": "$3.74",
+          "original_formatted": "$14.99",
+          "discount": 75
         }
       }
     },
@@ -2429,6 +2443,24 @@
           "original": 70800,
           "final_formatted": "177 ₽",
           "original_formatted": "708 ₽"
+        }
+      }
+    },
+    {
+      "appid": 107410,
+      "name": "Arma 3",
+      "discount": 75,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/107410/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/107410/header.jpg",
+      "url": "https://store.steampowered.com/app/107410/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 42200,
+          "original": 168800,
+          "final_formatted": "422 ₽",
+          "original_formatted": "1688 ₽"
         }
       }
     },
@@ -2487,24 +2519,6 @@
       }
     },
     {
-      "appid": 244210,
-      "name": "Assetto Corsa",
-      "discount": 75,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244210/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244210/header.jpg",
-      "url": "https://store.steampowered.com/app/244210/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 17700,
-          "original": 70800,
-          "final_formatted": "177 ₽",
-          "original_formatted": "708 ₽"
-        }
-      }
-    },
-    {
       "appid": 805550,
       "name": "Assetto Corsa Competizione",
       "discount": 75,
@@ -2519,6 +2533,51 @@
           "original": 159600,
           "final_formatted": "399 ₽",
           "original_formatted": "1596 ₽"
+        }
+      }
+    },
+    {
+      "appid": 244210,
+      "name": "Assetto Corsa",
+      "discount": 75,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244210/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244210/header.jpg",
+      "url": "https://store.steampowered.com/app/244210/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 17700,
+          "original": 71000,
+          "final_formatted": "177 руб.",
+          "original_formatted": "710 руб.",
+          "discount": 75
+        }
+      }
+    },
+    {
+      "appid": 1145360,
+      "name": "Hades",
+      "discount": 75,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg",
+      "url": "https://store.steampowered.com/app/1145360/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 22000,
+          "original": 88000,
+          "final_formatted": "220 ₽",
+          "original_formatted": "880 ₽"
+        },
+        "us": {
+          "currency": "USD",
+          "final": 624,
+          "original": 2499,
+          "final_formatted": "$6.24",
+          "original_formatted": "$24.99",
+          "discount": 75
         }
       }
     },
@@ -2541,20 +2600,20 @@
       }
     },
     {
-      "appid": 1145360,
-      "name": "Hades",
+      "appid": 599140,
+      "name": "Graveyard Keeper",
       "discount": 75,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg",
-      "url": "https://store.steampowered.com/app/1145360/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/599140/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/599140/header.jpg",
+      "url": "https://store.steampowered.com/app/599140/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 22000,
-          "original": 88000,
-          "final_formatted": "220 ₽",
-          "original_formatted": "880 ₽"
+          "final": 17700,
+          "original": 70800,
+          "final_formatted": "177 ₽",
+          "original_formatted": "708 ₽"
         }
       }
     },
@@ -2595,38 +2654,20 @@
       }
     },
     {
-      "appid": 599140,
-      "name": "Graveyard Keeper",
+      "appid": 848450,
+      "name": "Subnautica: Below Zero",
       "discount": 75,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/599140/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/599140/header.jpg",
-      "url": "https://store.steampowered.com/app/599140/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/848450/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/848450/header.jpg",
+      "url": "https://store.steampowered.com/app/848450/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 17700,
-          "original": 70800,
-          "final_formatted": "177 ₽",
-          "original_formatted": "708 ₽"
-        }
-      }
-    },
-    {
-      "appid": 1449690,
-      "name": "The Walking Dead: The Telltale Definitive Series",
-      "discount": 75,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449690/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449690/header.jpg",
-      "url": "https://store.steampowered.com/app/1449690/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 40000,
-          "original": 160000,
-          "final_formatted": "400 ₽",
-          "original_formatted": "1600 ₽"
+          "final": 45000,
+          "original": 180000,
+          "final_formatted": "450 ₽",
+          "original_formatted": "1800 ₽"
         }
       }
     },
@@ -2649,30 +2690,12 @@
       }
     },
     {
-      "appid": 2138710,
-      "name": "Sifu",
+      "appid": 220200,
+      "name": "Kerbal Space Program",
       "discount": 75,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138710/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138710/header.jpg",
-      "url": "https://store.steampowered.com/app/2138710/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 29900,
-          "original": 119600,
-          "final_formatted": "299 ₽",
-          "original_formatted": "1196 ₽"
-        }
-      }
-    },
-    {
-      "appid": 848450,
-      "name": "Subnautica: Below Zero",
-      "discount": 75,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/848450/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/848450/header.jpg",
-      "url": "https://store.steampowered.com/app/848450/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220200/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220200/header.jpg",
+      "url": "https://store.steampowered.com/app/220200/",
       "discount_expiration": null,
       "prices": {
         "ru": {
@@ -2681,6 +2704,14 @@
           "original": 180000,
           "final_formatted": "450 ₽",
           "original_formatted": "1800 ₽"
+        },
+        "us": {
+          "currency": "USD",
+          "final": 999,
+          "original": 3999,
+          "final_formatted": "$9.99",
+          "original_formatted": "$39.99",
+          "discount": 75
         }
       }
     },
@@ -2711,6 +2742,42 @@
       }
     },
     {
+      "appid": 2138710,
+      "name": "Sifu",
+      "discount": 75,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138710/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138710/header.jpg",
+      "url": "https://store.steampowered.com/app/2138710/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 29900,
+          "original": 119600,
+          "final_formatted": "299 ₽",
+          "original_formatted": "1196 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1449690,
+      "name": "The Walking Dead: The Telltale Definitive Series",
+      "discount": 75,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449690/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449690/header.jpg",
+      "url": "https://store.steampowered.com/app/1449690/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 40000,
+          "original": 160000,
+          "final_formatted": "400 ₽",
+          "original_formatted": "1600 ₽"
+        }
+      }
+    },
+    {
       "appid": 424840,
       "name": "Little Nightmares",
       "discount": 75,
@@ -2725,24 +2792,6 @@
           "original": 142800,
           "final_formatted": "357 ₽",
           "original_formatted": "1428 ₽"
-        }
-      }
-    },
-    {
-      "appid": 220200,
-      "name": "Kerbal Space Program",
-      "discount": 75,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220200/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220200/header.jpg",
-      "url": "https://store.steampowered.com/app/220200/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 45000,
-          "original": 180000,
-          "final_formatted": "450 ₽",
-          "original_formatted": "1800 ₽"
         }
       }
     },
@@ -2773,20 +2822,20 @@
       }
     },
     {
-      "appid": 391540,
-      "name": "Undertale",
+      "appid": 632470,
+      "name": "Disco Elysium - The Final Cut",
       "discount": 75,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg",
-      "url": "https://store.steampowered.com/app/391540/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/header.jpg",
+      "url": "https://store.steampowered.com/app/632470/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 6200,
-          "original": 24800,
-          "final_formatted": "62 ₽",
-          "original_formatted": "248 ₽"
+          "final": 38700,
+          "original": 154800,
+          "final_formatted": "387 ₽",
+          "original_formatted": "1548 ₽"
         }
       }
     },
@@ -2809,38 +2858,28 @@
       }
     },
     {
-      "appid": 632470,
-      "name": "Disco Elysium - The Final Cut",
+      "appid": 391540,
+      "name": "Undertale",
       "discount": 75,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/header.jpg",
-      "url": "https://store.steampowered.com/app/632470/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg",
+      "url": "https://store.steampowered.com/app/391540/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 38700,
-          "original": 154800,
-          "final_formatted": "387 ₽",
-          "original_formatted": "1548 ₽"
-        }
-      }
-    },
-    {
-      "appid": 493520,
-      "name": "GTFO",
-      "discount": 73,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493520/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493520/header.jpg",
-      "url": "https://store.steampowered.com/app/493520/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 45200,
-          "original": 167407,
-          "final_formatted": "452 ₽",
-          "original_formatted": "1674.07 ₽"
+          "final": 6200,
+          "original": 24800,
+          "final_formatted": "62 ₽",
+          "original_formatted": "248 ₽"
+        },
+        "us": {
+          "currency": "USD",
+          "final": 249,
+          "original": 999,
+          "final_formatted": "$2.49",
+          "original_formatted": "$9.99",
+          "discount": 75
         }
       }
     },
@@ -2972,42 +3011,6 @@
       }
     },
     {
-      "appid": 457140,
-      "name": "Oxygen Not Included",
-      "discount": 70,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/457140/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/457140/header.jpg",
-      "url": "https://store.steampowered.com/app/457140/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 13400,
-          "original": 44667,
-          "final_formatted": "134 ₽",
-          "original_formatted": "446.67 ₽"
-        }
-      }
-    },
-    {
-      "appid": 255710,
-      "name": "Cities: Skylines",
-      "discount": 70,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg",
-      "url": "https://store.steampowered.com/app/255710/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 52700,
-          "original": 175667,
-          "final_formatted": "527 ₽",
-          "original_formatted": "1756.67 ₽"
-        }
-      }
-    },
-    {
       "appid": 529340,
       "name": "Victoria 3",
       "discount": 70,
@@ -3026,6 +3029,24 @@
       }
     },
     {
+      "appid": 457140,
+      "name": "Oxygen Not Included",
+      "discount": 70,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/457140/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/457140/header.jpg",
+      "url": "https://store.steampowered.com/app/457140/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 13400,
+          "original": 44667,
+          "final_formatted": "134 ₽",
+          "original_formatted": "446.67 ₽"
+        }
+      }
+    },
+    {
       "appid": 1620730,
       "name": "Hell is Us",
       "discount": 70,
@@ -3040,6 +3061,24 @@
           "original": 299667,
           "final_formatted": "899 ₽",
           "original_formatted": "2996.67 ₽"
+        }
+      }
+    },
+    {
+      "appid": 255710,
+      "name": "Cities: Skylines",
+      "discount": 70,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg",
+      "url": "https://store.steampowered.com/app/255710/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 52700,
+          "original": 175667,
+          "final_formatted": "527 ₽",
+          "original_formatted": "1756.67 ₽"
         }
       }
     },
@@ -3080,6 +3119,24 @@
       }
     },
     {
+      "appid": 613100,
+      "name": "House Flipper",
+      "discount": 70,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/613100/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/613100/header.jpg",
+      "url": "https://store.steampowered.com/app/613100/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 26400,
+          "original": 88000,
+          "final_formatted": "264 ₽",
+          "original_formatted": "880 ₽"
+        }
+      }
+    },
+    {
       "appid": 362680,
       "name": "Fran Bow",
       "discount": 70,
@@ -3094,24 +3151,6 @@
           "original": 34667,
           "final_formatted": "104 ₽",
           "original_formatted": "346.67 ₽"
-        }
-      }
-    },
-    {
-      "appid": 365360,
-      "name": "Battle Brothers",
-      "discount": 70,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/365360/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/365360/header.jpg",
-      "url": "https://store.steampowered.com/app/365360/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 29900,
-          "original": 99667,
-          "final_formatted": "299 ₽",
-          "original_formatted": "996.67 ₽"
         }
       }
     },
@@ -3206,24 +3245,6 @@
       }
     },
     {
-      "appid": 1611600,
-      "name": "WARNO",
-      "discount": 66,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1611600/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1611600/header.jpg",
-      "url": "https://store.steampowered.com/app/1611600/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 84900,
-          "original": 249706,
-          "final_formatted": "849 ₽",
-          "original_formatted": "2497.06 ₽"
-        }
-      }
-    },
-    {
       "appid": 1256670,
       "name": "Library Of Ruina",
       "discount": 66,
@@ -3238,6 +3259,24 @@
           "original": 95000,
           "final_formatted": "323 ₽",
           "original_formatted": "950 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1611600,
+      "name": "WARNO",
+      "discount": 66,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1611600/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1611600/header.jpg",
+      "url": "https://store.steampowered.com/app/1611600/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 84900,
+          "original": 249706,
+          "final_formatted": "849 ₽",
+          "original_formatted": "2497.06 ₽"
         }
       }
     },
@@ -3422,6 +3461,24 @@
       }
     },
     {
+      "appid": 1049290,
+      "name": "Warhammer 40,000: Mechanicus - Heretek",
+      "discount": 60,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1049290/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1049290/header.jpg",
+      "url": "https://store.steampowered.com/app/1049290/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 15400,
+          "original": 38500,
+          "final_formatted": "154 ₽",
+          "original_formatted": "385 ₽"
+        }
+      }
+    },
+    {
       "appid": 1092790,
       "name": "Inscryption",
       "discount": 60,
@@ -3541,9 +3598,10 @@
         "ru": {
           "currency": "RUB",
           "final": 84900,
-          "original": 169800,
+          "original": 169900,
           "final_formatted": "849 ₽",
-          "original_formatted": "1698 ₽"
+          "original_formatted": "1699 ₽",
+          "discount": 50
         }
       }
     },
@@ -3639,24 +3697,6 @@
       }
     },
     {
-      "appid": 1466060,
-      "name": "Tainted Grail: The Fall of Avalon",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/header.jpg",
-      "url": "https://store.steampowered.com/app/1466060/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 75000,
-          "original": 150000,
-          "final_formatted": "750 ₽",
-          "original_formatted": "1500 ₽"
-        }
-      }
-    },
-    {
       "appid": 105600,
       "name": "Terraria",
       "discount": 50,
@@ -3671,6 +3711,24 @@
           "original": 38400,
           "final_formatted": "192 ₽",
           "original_formatted": "384 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1466060,
+      "name": "Tainted Grail: The Fall of Avalon",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/header.jpg",
+      "url": "https://store.steampowered.com/app/1466060/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 75000,
+          "original": 150000,
+          "final_formatted": "750 ₽",
+          "original_formatted": "1500 ₽"
         }
       }
     },
@@ -3693,42 +3751,6 @@
       }
     },
     {
-      "appid": 393380,
-      "name": "Squad",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/393380/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/393380/header.jpg",
-      "url": "https://store.steampowered.com/app/393380/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 89900,
-          "original": 179800,
-          "final_formatted": "899 ₽",
-          "original_formatted": "1798 ₽"
-        }
-      }
-    },
-    {
-      "appid": 4000,
-      "name": "Garry's Mod",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg",
-      "url": "https://store.steampowered.com/app/4000/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 37500,
-          "original": 75000,
-          "final_formatted": "375 ₽",
-          "original_formatted": "750 ₽"
-        }
-      }
-    },
-    {
       "appid": 1313140,
       "name": "Cult of the Lamb",
       "discount": 50,
@@ -3747,20 +3769,20 @@
       }
     },
     {
-      "appid": 1332010,
-      "name": "Stray",
+      "appid": 393380,
+      "name": "Squad",
       "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/header.jpg",
-      "url": "https://store.steampowered.com/app/1332010/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/393380/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/393380/header.jpg",
+      "url": "https://store.steampowered.com/app/393380/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 63400,
-          "original": 126800,
-          "final_formatted": "634 ₽",
-          "original_formatted": "1268 ₽"
+          "final": 89900,
+          "original": 179800,
+          "final_formatted": "899 ₽",
+          "original_formatted": "1798 ₽"
         }
       }
     },
@@ -3783,20 +3805,38 @@
       }
     },
     {
-      "appid": 1149460,
-      "name": "ICARUS",
+      "appid": 4000,
+      "name": "Garry's Mod",
       "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1149460/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1149460/header.jpg",
-      "url": "https://store.steampowered.com/app/1149460/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg",
+      "url": "https://store.steampowered.com/app/4000/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 60000,
-          "original": 120000,
-          "final_formatted": "600 ₽",
-          "original_formatted": "1200 ₽"
+          "final": 37500,
+          "original": 75000,
+          "final_formatted": "375 ₽",
+          "original_formatted": "750 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1332010,
+      "name": "Stray",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/header.jpg",
+      "url": "https://store.steampowered.com/app/1332010/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 63400,
+          "original": 126800,
+          "final_formatted": "634 ₽",
+          "original_formatted": "1268 ₽"
         }
       }
     },
@@ -3815,6 +3855,24 @@
           "original": 139800,
           "final_formatted": "699 ₽",
           "original_formatted": "1398 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1149460,
+      "name": "ICARUS",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1149460/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1149460/header.jpg",
+      "url": "https://store.steampowered.com/app/1149460/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 60000,
+          "original": 120000,
+          "final_formatted": "600 ₽",
+          "original_formatted": "1200 ₽"
         }
       }
     },
@@ -3873,24 +3931,6 @@
       }
     },
     {
-      "appid": 1809540,
-      "name": "Nine Sols",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1809540/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1809540/header.jpg",
-      "url": "https://store.steampowered.com/app/1809540/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 55000,
-          "original": 110000,
-          "final_formatted": "550 ₽",
-          "original_formatted": "1100 ₽"
-        }
-      }
-    },
-    {
       "appid": 588650,
       "name": "Dead Cells",
       "discount": 50,
@@ -3923,6 +3963,42 @@
           "original": 249800,
           "final_formatted": "1249 ₽",
           "original_formatted": "2498 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1809540,
+      "name": "Nine Sols",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1809540/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1809540/header.jpg",
+      "url": "https://store.steampowered.com/app/1809540/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 55000,
+          "original": 110000,
+          "final_formatted": "550 ₽",
+          "original_formatted": "1100 ₽"
+        }
+      }
+    },
+    {
+      "appid": 753640,
+      "name": "Outer Wilds",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/header.jpg",
+      "url": "https://store.steampowered.com/app/753640/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 52500,
+          "original": 105000,
+          "final_formatted": "525 ₽",
+          "original_formatted": "1050 ₽"
         }
       }
     },
@@ -3963,38 +4039,38 @@
       }
     },
     {
-      "appid": 753640,
-      "name": "Outer Wilds",
+      "appid": 335300,
+      "name": "DARK SOULS™ II: Scholar of the First Sin",
       "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/header.jpg",
-      "url": "https://store.steampowered.com/app/753640/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/335300/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/335300/header.jpg",
+      "url": "https://store.steampowered.com/app/335300/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 52500,
-          "original": 105000,
-          "final_formatted": "525 ₽",
-          "original_formatted": "1050 ₽"
+          "final": 119900,
+          "original": 239800,
+          "final_formatted": "1199 ₽",
+          "original_formatted": "2398 ₽"
         }
       }
     },
     {
-      "appid": 747660,
-      "name": "Five Nights at Freddy's: Security Breach",
+      "appid": 602960,
+      "name": "Barotrauma",
       "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/747660/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/747660/header.jpg",
-      "url": "https://store.steampowered.com/app/747660/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/602960/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/602960/header.jpg",
+      "url": "https://store.steampowered.com/app/602960/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 36200,
-          "original": 72400,
-          "final_formatted": "362 ₽",
-          "original_formatted": "724 ₽"
+          "final": 55000,
+          "original": 110000,
+          "final_formatted": "550 ₽",
+          "original_formatted": "1100 ₽"
         }
       }
     },
@@ -4035,42 +4111,6 @@
       }
     },
     {
-      "appid": 602960,
-      "name": "Barotrauma",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/602960/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/602960/header.jpg",
-      "url": "https://store.steampowered.com/app/602960/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 55000,
-          "original": 110000,
-          "final_formatted": "550 ₽",
-          "original_formatted": "1100 ₽"
-        }
-      }
-    },
-    {
-      "appid": 1044720,
-      "name": "Farthest Frontier",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1044720/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1044720/header.jpg",
-      "url": "https://store.steampowered.com/app/1044720/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 60000,
-          "original": 120000,
-          "final_formatted": "600 ₽",
-          "original_formatted": "1200 ₽"
-        }
-      }
-    },
-    {
       "appid": 2214822,
       "name": "Atomic Heart - Trapped in Limbo",
       "discount": 50,
@@ -4089,66 +4129,12 @@
       }
     },
     {
-      "appid": 1284190,
-      "name": "The Planet Crafter",
+      "appid": 747660,
+      "name": "Five Nights at Freddy's: Security Breach",
       "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284190/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284190/header.jpg",
-      "url": "https://store.steampowered.com/app/1284190/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 49900,
-          "original": 99800,
-          "final_formatted": "499 ₽",
-          "original_formatted": "998 ₽"
-        }
-      }
-    },
-    {
-      "appid": 4132150,
-      "name": "Tainted Grail: The Fall of Avalon - Sanctuary of Sarras DLC",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132150/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132150/header.jpg",
-      "url": "https://store.steampowered.com/app/4132150/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 27500,
-          "original": 55000,
-          "final_formatted": "275 ₽",
-          "original_formatted": "550 ₽"
-        }
-      }
-    },
-    {
-      "appid": 335300,
-      "name": "DARK SOULS™ II: Scholar of the First Sin",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/335300/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/335300/header.jpg",
-      "url": "https://store.steampowered.com/app/335300/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 119900,
-          "original": 239800,
-          "final_formatted": "1199 ₽",
-          "original_formatted": "2398 ₽"
-        }
-      }
-    },
-    {
-      "appid": 1066890,
-      "name": "Automobilista 2",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1066890/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1066890/header.jpg",
-      "url": "https://store.steampowered.com/app/1066890/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/747660/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/747660/header.jpg",
+      "url": "https://store.steampowered.com/app/747660/",
       "discount_expiration": null,
       "prices": {
         "ru": {
@@ -4179,6 +4165,60 @@
       }
     },
     {
+      "appid": 1284190,
+      "name": "The Planet Crafter",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284190/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284190/header.jpg",
+      "url": "https://store.steampowered.com/app/1284190/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 49900,
+          "original": 99800,
+          "final_formatted": "499 ₽",
+          "original_formatted": "998 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1044720,
+      "name": "Farthest Frontier",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1044720/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1044720/header.jpg",
+      "url": "https://store.steampowered.com/app/1044720/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 60000,
+          "original": 120000,
+          "final_formatted": "600 ₽",
+          "original_formatted": "1200 ₽"
+        }
+      }
+    },
+    {
+      "appid": 4132150,
+      "name": "Tainted Grail: The Fall of Avalon - Sanctuary of Sarras DLC",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132150/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132150/header.jpg",
+      "url": "https://store.steampowered.com/app/4132150/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 27500,
+          "original": 55000,
+          "final_formatted": "275 ₽",
+          "original_formatted": "550 ₽"
+        }
+      }
+    },
+    {
       "appid": 286160,
       "name": "Tabletop Simulator",
       "discount": 50,
@@ -4193,24 +4233,6 @@
           "original": 71000,
           "final_formatted": "355 ₽",
           "original_formatted": "710 ₽"
-        }
-      }
-    },
-    {
-      "appid": 1931770,
-      "name": "Chants of Sennaar",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1931770/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1931770/header.jpg",
-      "url": "https://store.steampowered.com/app/1931770/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 49900,
-          "original": 99800,
-          "final_formatted": "499 ₽",
-          "original_formatted": "998 ₽"
         }
       }
     },
@@ -4233,38 +4255,38 @@
       }
     },
     {
-      "appid": 925580,
-      "name": "Euro Truck Simulator 2 - Beyond the Baltic Sea",
+      "appid": 1931770,
+      "name": "Chants of Sennaar",
       "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/925580/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/925580/header.jpg",
-      "url": "https://store.steampowered.com/app/925580/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1931770/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1931770/header.jpg",
+      "url": "https://store.steampowered.com/app/1931770/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 54900,
-          "original": 109800,
-          "final_formatted": "549 ₽",
-          "original_formatted": "1098 ₽"
+          "final": 49900,
+          "original": 99800,
+          "final_formatted": "499 ₽",
+          "original_formatted": "998 ₽"
         }
       }
     },
     {
-      "appid": 3407390,
-      "name": "ENDLESS Legend™ 2",
+      "appid": 1066890,
+      "name": "Automobilista 2",
       "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3407390/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3407390/header.jpg",
-      "url": "https://store.steampowered.com/app/3407390/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1066890/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1066890/header.jpg",
+      "url": "https://store.steampowered.com/app/1066890/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 99900,
-          "original": 199800,
-          "final_formatted": "999 ₽",
-          "original_formatted": "1998 ₽"
+          "final": 36200,
+          "original": 72400,
+          "final_formatted": "362 ₽",
+          "original_formatted": "724 ₽"
         }
       }
     },
@@ -4287,56 +4309,38 @@
       }
     },
     {
-      "appid": 244850,
-      "name": "Space Engineers",
+      "appid": 3407390,
+      "name": "ENDLESS Legend™ 2",
       "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244850/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244850/header.jpg",
-      "url": "https://store.steampowered.com/app/244850/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3407390/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3407390/header.jpg",
+      "url": "https://store.steampowered.com/app/3407390/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 80000,
-          "original": 160000,
-          "final_formatted": "800 ₽",
-          "original_formatted": "1600 ₽"
+          "final": 99900,
+          "original": 199800,
+          "final_formatted": "999 ₽",
+          "original_formatted": "1998 ₽"
         }
       }
     },
     {
-      "appid": 337320,
-      "name": "Paint the Town Red",
+      "appid": 925580,
+      "name": "Euro Truck Simulator 2 - Beyond the Baltic Sea",
       "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/337320/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/337320/header.jpg",
-      "url": "https://store.steampowered.com/app/337320/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/925580/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/925580/header.jpg",
+      "url": "https://store.steampowered.com/app/925580/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 35500,
-          "original": 71000,
-          "final_formatted": "355 ₽",
-          "original_formatted": "710 ₽"
-        }
-      }
-    },
-    {
-      "appid": 2981410,
-      "name": "The Talos Principle 2 - Road to Elysium",
-      "discount": 50,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2981410/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2981410/header.jpg",
-      "url": "https://store.steampowered.com/app/2981410/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 35500,
-          "original": 71000,
-          "final_formatted": "355 ₽",
-          "original_formatted": "710 ₽"
+          "final": 54900,
+          "original": 109800,
+          "final_formatted": "549 ₽",
+          "original_formatted": "1098 ₽"
         }
       }
     },
@@ -4355,6 +4359,60 @@
           "original": 109800,
           "final_formatted": "549 ₽",
           "original_formatted": "1098 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1159690,
+      "name": "Voidtrain",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1159690/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1159690/header.jpg",
+      "url": "https://store.steampowered.com/app/1159690/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 49900,
+          "original": 99800,
+          "final_formatted": "499 ₽",
+          "original_formatted": "998 ₽"
+        }
+      }
+    },
+    {
+      "appid": 673750,
+      "name": "Super Bunny Man",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/673750/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/673750/header.jpg",
+      "url": "https://store.steampowered.com/app/673750/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 34400,
+          "original": 68800,
+          "final_formatted": "344 ₽",
+          "original_formatted": "688 ₽"
+        }
+      }
+    },
+    {
+      "appid": 337320,
+      "name": "Paint the Town Red",
+      "discount": 50,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/337320/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/337320/header.jpg",
+      "url": "https://store.steampowered.com/app/337320/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 35500,
+          "original": 71000,
+          "final_formatted": "355 ₽",
+          "original_formatted": "710 ₽"
         }
       }
     },
@@ -4485,42 +4543,6 @@
       }
     },
     {
-      "appid": 945360,
-      "name": "Among Us",
-      "discount": 40,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg",
-      "url": "https://store.steampowered.com/app/945360/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 13500,
-          "original": 22500,
-          "final_formatted": "135 ₽",
-          "original_formatted": "225 ₽"
-        }
-      }
-    },
-    {
-      "appid": 2680010,
-      "name": "The First Berserker: Khazan",
-      "discount": 40,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2680010/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2680010/header.jpg",
-      "url": "https://store.steampowered.com/app/2680010/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 214700,
-          "original": 357833,
-          "final_formatted": "2147 ₽",
-          "original_formatted": "3578.33 ₽"
-        }
-      }
-    },
-    {
       "appid": 880940,
       "name": "Pummel Party",
       "discount": 40,
@@ -4535,6 +4557,24 @@
           "original": 55000,
           "final_formatted": "330 ₽",
           "original_formatted": "550 ₽"
+        }
+      }
+    },
+    {
+      "appid": 945360,
+      "name": "Among Us",
+      "discount": 40,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg",
+      "url": "https://store.steampowered.com/app/945360/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 13500,
+          "original": 22500,
+          "final_formatted": "135 ₽",
+          "original_formatted": "225 ₽"
         }
       }
     },
@@ -4557,38 +4597,20 @@
       }
     },
     {
-      "appid": 2835570,
-      "name": "Buckshot Roulette",
+      "appid": 2680010,
+      "name": "The First Berserker: Khazan",
       "discount": 40,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2835570/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2835570/header.jpg",
-      "url": "https://store.steampowered.com/app/2835570/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2680010/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2680010/header.jpg",
+      "url": "https://store.steampowered.com/app/2680010/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 5900,
-          "original": 9833,
-          "final_formatted": "59 ₽",
-          "original_formatted": "98.33 ₽"
-        }
-      }
-    },
-    {
-      "appid": 2014780,
-      "name": "X-Plane 12",
-      "discount": 40,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2014780/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2014780/header.jpg",
-      "url": "https://store.steampowered.com/app/2014780/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 114000,
-          "original": 190000,
-          "final_formatted": "1140 ₽",
-          "original_formatted": "1900 ₽"
+          "final": 214700,
+          "original": 357833,
+          "final_formatted": "2147 ₽",
+          "original_formatted": "3578.33 ₽"
         }
       }
     },
@@ -4607,6 +4629,24 @@
           "original": 71000,
           "final_formatted": "426 ₽",
           "original_formatted": "710 ₽"
+        }
+      }
+    },
+    {
+      "appid": 2835570,
+      "name": "Buckshot Roulette",
+      "discount": 40,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2835570/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2835570/header.jpg",
+      "url": "https://store.steampowered.com/app/2835570/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 5900,
+          "original": 9833,
+          "final_formatted": "59 ₽",
+          "original_formatted": "98.33 ₽"
         }
       }
     },
@@ -4643,6 +4683,42 @@
           "original": 71000,
           "final_formatted": "426 ₽",
           "original_formatted": "710 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1040200,
+      "name": "Crime Scene Cleaner",
+      "discount": 40,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1040200/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1040200/header.jpg",
+      "url": "https://store.steampowered.com/app/1040200/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 102200,
+          "original": 170333,
+          "final_formatted": "1022 ₽",
+          "original_formatted": "1703.33 ₽"
+        }
+      }
+    },
+    {
+      "appid": 3097560,
+      "name": "Liar's Bar",
+      "discount": 40,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3097560/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3097560/header.jpg",
+      "url": "https://store.steampowered.com/app/3097560/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 16800,
+          "original": 28000,
+          "final_formatted": "168 ₽",
+          "original_formatted": "280 ₽"
         }
       }
     },
@@ -4722,6 +4798,24 @@
           "original": 35806,
           "final_formatted": "222 ₽",
           "original_formatted": "358.06 ₽"
+        }
+      }
+    },
+    {
+      "appid": 2881650,
+      "name": "Content Warning",
+      "discount": 38,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2881650/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2881650/header.jpg",
+      "url": "https://store.steampowered.com/app/2881650/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 21000,
+          "original": 33871,
+          "final_formatted": "210 ₽",
+          "original_formatted": "338.71 ₽"
         }
       }
     },
@@ -4994,12 +5088,46 @@
       "url": "https://store.steampowered.com/app/413150/",
       "discount_expiration": null,
       "prices": {
+        "kz": {
+          "currency": "KZT",
+          "final": 168000,
+          "original": 240000,
+          "final_formatted": "1680 ₸",
+          "original_formatted": "2400 ₸",
+          "discount": 30
+        },
+        "ua": {
+          "currency": "UAH",
+          "final": 16000,
+          "original": 22900,
+          "final_formatted": "160 ₴",
+          "original_formatted": "229 ₴",
+          "discount": 30
+        },
         "ru": {
           "currency": "RUB",
           "final": 20900,
           "original": 29857,
           "final_formatted": "209 ₽",
           "original_formatted": "298.57 ₽"
+        }
+      }
+    },
+    {
+      "appid": 4704690,
+      "name": "MECCHA CHAMELEON",
+      "discount": 30,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4704690/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4704690/header.jpg",
+      "url": "https://store.steampowered.com/app/4704690/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 20300,
+          "original": 29000,
+          "final_formatted": "203 ₽",
+          "original_formatted": "290 ₽"
         }
       }
     },
@@ -5040,20 +5168,20 @@
       }
     },
     {
-      "appid": 4704690,
-      "name": "MECCHA CHAMELEON",
+      "appid": 526870,
+      "name": "Satisfactory",
       "discount": 30,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4704690/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4704690/header.jpg",
-      "url": "https://store.steampowered.com/app/4704690/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/526870/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/526870/header.jpg",
+      "url": "https://store.steampowered.com/app/526870/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 20300,
-          "original": 29000,
-          "final_formatted": "203 ₽",
-          "original_formatted": "290 ₽"
+          "final": 91000,
+          "original": 130000,
+          "final_formatted": "910 ₽",
+          "original_formatted": "1300 ₽"
         }
       }
     },
@@ -5090,24 +5218,6 @@
           "original": 147429,
           "final_formatted": "1032 ₽",
           "original_formatted": "1474.29 ₽"
-        }
-      }
-    },
-    {
-      "appid": 526870,
-      "name": "Satisfactory",
-      "discount": 30,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/526870/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/526870/header.jpg",
-      "url": "https://store.steampowered.com/app/526870/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 91000,
-          "original": 130000,
-          "final_formatted": "910 ₽",
-          "original_formatted": "1300 ₽"
         }
       }
     },
@@ -5202,20 +5312,20 @@
       }
     },
     {
-      "appid": 1154030,
-      "name": "Titan Quest II",
+      "appid": 3844970,
+      "name": "Burglin' Gnomes",
       "discount": 30,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1154030/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1154030/header.jpg",
-      "url": "https://store.steampowered.com/app/1154030/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3844970/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3844970/header.jpg",
+      "url": "https://store.steampowered.com/app/3844970/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 107800,
-          "original": 154000,
-          "final_formatted": "1078 ₽",
-          "original_formatted": "1540 ₽"
+          "final": 29400,
+          "original": 42000,
+          "final_formatted": "294 ₽",
+          "original_formatted": "420 ₽"
         }
       }
     },
@@ -5256,24 +5366,6 @@
       }
     },
     {
-      "appid": 3844970,
-      "name": "Burglin' Gnomes",
-      "discount": 30,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3844970/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3844970/header.jpg",
-      "url": "https://store.steampowered.com/app/3844970/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 29400,
-          "original": 42000,
-          "final_formatted": "294 ₽",
-          "original_formatted": "420 ₽"
-        }
-      }
-    },
-    {
       "appid": 2879840,
       "name": "Escape Simulator 2",
       "discount": 30,
@@ -5298,6 +5390,78 @@
       "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3834090/header.jpg",
       "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3834090/header.jpg",
       "url": "https://store.steampowered.com/app/3834090/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 26900,
+          "original": 38429,
+          "final_formatted": "269 ₽",
+          "original_formatted": "384.29 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1154030,
+      "name": "Titan Quest II",
+      "discount": 30,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1154030/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1154030/header.jpg",
+      "url": "https://store.steampowered.com/app/1154030/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 107800,
+          "original": 154000,
+          "final_formatted": "1078 ₽",
+          "original_formatted": "1540 ₽"
+        }
+      }
+    },
+    {
+      "appid": 2605790,
+      "name": "Deep Rock Galactic: Rogue Core",
+      "discount": 30,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2605790/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2605790/header.jpg",
+      "url": "https://store.steampowered.com/app/2605790/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 75500,
+          "original": 107857,
+          "final_formatted": "755 ₽",
+          "original_formatted": "1078.57 ₽"
+        }
+      }
+    },
+    {
+      "appid": 2444750,
+      "name": "Shape of Dreams",
+      "discount": 30,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2444750/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2444750/header.jpg",
+      "url": "https://store.steampowered.com/app/2444750/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 63000,
+          "original": 90000,
+          "final_formatted": "630 ₽",
+          "original_formatted": "900 ₽"
+        }
+      }
+    },
+    {
+      "appid": 2827200,
+      "name": "MIMESIS",
+      "discount": 30,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2827200/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2827200/header.jpg",
+      "url": "https://store.steampowered.com/app/2827200/",
       "discount_expiration": null,
       "prices": {
         "ru": {
@@ -5342,42 +5506,6 @@
           "original": 85500,
           "final_formatted": "598.50 ₽",
           "original_formatted": "855 ₽"
-        }
-      }
-    },
-    {
-      "appid": 2444750,
-      "name": "Shape of Dreams",
-      "discount": 30,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2444750/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2444750/header.jpg",
-      "url": "https://store.steampowered.com/app/2444750/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 63000,
-          "original": 90000,
-          "final_formatted": "630 ₽",
-          "original_formatted": "900 ₽"
-        }
-      }
-    },
-    {
-      "appid": 2605790,
-      "name": "Deep Rock Galactic: Rogue Core",
-      "discount": 30,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2605790/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2605790/header.jpg",
-      "url": "https://store.steampowered.com/app/2605790/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 75500,
-          "original": 107857,
-          "final_formatted": "755 ₽",
-          "original_formatted": "1078.57 ₽"
         }
       }
     },
@@ -5562,24 +5690,6 @@
       }
     },
     {
-      "appid": 1604270,
-      "name": "Broken Arrow",
-      "discount": 25,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1604270/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1604270/header.jpg",
-      "url": "https://store.steampowered.com/app/1604270/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 150000,
-          "original": 200000,
-          "final_formatted": "1500 ₽",
-          "original_formatted": "2000 ₽"
-        }
-      }
-    },
-    {
       "appid": 2141730,
       "name": "Backrooms: Escape Together",
       "discount": 25,
@@ -5594,6 +5704,24 @@
           "original": 38400,
           "final_formatted": "288 ₽",
           "original_formatted": "384 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1604270,
+      "name": "Broken Arrow",
+      "discount": 25,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1604270/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1604270/header.jpg",
+      "url": "https://store.steampowered.com/app/1604270/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 150000,
+          "original": 200000,
+          "final_formatted": "1500 ₽",
+          "original_formatted": "2000 ₽"
         }
       }
     },
@@ -5670,24 +5798,6 @@
       }
     },
     {
-      "appid": 4294490,
-      "name": "KOTAMON: My Sis Found A Super-Rare Card In Her Cereal Box, So I Became A Garbage Man To Find The Entire Collection And Earn $1,000,000",
-      "discount": 25,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4294490/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4294490/header.jpg",
-      "url": "https://store.steampowered.com/app/4294490/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 25100,
-          "original": 33467,
-          "final_formatted": "251 ₽",
-          "original_formatted": "334.67 ₽"
-        }
-      }
-    },
-    {
       "appid": 5241370,
       "name": "SOS OPS! - OVERBOOKED",
       "discount": 25,
@@ -5702,6 +5812,24 @@
           "original": 5067,
           "final_formatted": "38 ₽",
           "original_formatted": "50.67 ₽"
+        }
+      }
+    },
+    {
+      "appid": 4294490,
+      "name": "KOTAMON: My Sis Found A Super-Rare Card In Her Cereal Box, So I Became A Garbage Man To Find The Entire Collection And Earn $1,000,000",
+      "discount": 25,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4294490/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4294490/header.jpg",
+      "url": "https://store.steampowered.com/app/4294490/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 25100,
+          "original": 33467,
+          "final_formatted": "251 ₽",
+          "original_formatted": "334.67 ₽"
         }
       }
     },
@@ -5724,6 +5852,78 @@
       }
     },
     {
+      "appid": 2253100,
+      "name": "Everwind",
+      "discount": 25,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2253100/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2253100/header.jpg",
+      "url": "https://store.steampowered.com/app/2253100/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 88500,
+          "original": 118000,
+          "final_formatted": "885 ₽",
+          "original_formatted": "1180 ₽"
+        }
+      }
+    },
+    {
+      "appid": 2625420,
+      "name": "Drive Beyond Horizons",
+      "discount": 25,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2625420/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2625420/header.jpg",
+      "url": "https://store.steampowered.com/app/2625420/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 56200,
+          "original": 74933,
+          "final_formatted": "562 ₽",
+          "original_formatted": "749.33 ₽"
+        }
+      }
+    },
+    {
+      "appid": 2432860,
+      "name": "MENACE",
+      "discount": 25,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2432860/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2432860/header.jpg",
+      "url": "https://store.steampowered.com/app/2432860/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 112400,
+          "original": 149867,
+          "final_formatted": "1124 ₽",
+          "original_formatted": "1498.67 ₽"
+        }
+      }
+    },
+    {
+      "appid": 2679100,
+      "name": "Witchspire",
+      "discount": 25,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2679100/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2679100/header.jpg",
+      "url": "https://store.steampowered.com/app/2679100/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 72397,
+          "original": 96529,
+          "final_formatted": "723.97 ₽",
+          "original_formatted": "965.29 ₽"
+        }
+      }
+    },
+    {
       "appid": 401920,
       "name": "The Binding of Isaac: Afterbirth",
       "discount": 25,
@@ -5738,24 +5938,6 @@
           "original": 25867,
           "final_formatted": "194 ₽",
           "original_formatted": "258.67 ₽"
-        }
-      }
-    },
-    {
-      "appid": 570660,
-      "name": "The Binding of Isaac: Afterbirth+",
-      "discount": 25,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570660/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570660/header.jpg",
-      "url": "https://store.steampowered.com/app/570660/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 0,
-          "original": 0,
-          "final_formatted": "0 ₽",
-          "original_formatted": "0 ₽"
         }
       }
     },
@@ -5796,74 +5978,20 @@
       }
     },
     {
-      "appid": 2625420,
-      "name": "Drive Beyond Horizons",
+      "appid": 570660,
+      "name": "The Binding of Isaac: Afterbirth+",
       "discount": 25,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2625420/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2625420/header.jpg",
-      "url": "https://store.steampowered.com/app/2625420/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570660/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570660/header.jpg",
+      "url": "https://store.steampowered.com/app/570660/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 56200,
-          "original": 74933,
-          "final_formatted": "562 ₽",
-          "original_formatted": "749.33 ₽"
-        }
-      }
-    },
-    {
-      "appid": 2679100,
-      "name": "Witchspire",
-      "discount": 25,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2679100/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2679100/header.jpg",
-      "url": "https://store.steampowered.com/app/2679100/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 72397,
-          "original": 96529,
-          "final_formatted": "723.97 ₽",
-          "original_formatted": "965.29 ₽"
-        }
-      }
-    },
-    {
-      "appid": 2432860,
-      "name": "MENACE",
-      "discount": 25,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2432860/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2432860/header.jpg",
-      "url": "https://store.steampowered.com/app/2432860/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 112400,
-          "original": 149867,
-          "final_formatted": "1124 ₽",
-          "original_formatted": "1498.67 ₽"
-        }
-      }
-    },
-    {
-      "appid": 2253100,
-      "name": "Everwind",
-      "discount": 25,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2253100/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2253100/header.jpg",
-      "url": "https://store.steampowered.com/app/2253100/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 88500,
-          "original": 118000,
-          "final_formatted": "885 ₽",
-          "original_formatted": "1180 ₽"
+          "final": 0,
+          "original": 0,
+          "final_formatted": "0 ₽",
+          "original_formatted": "0 ₽"
         }
       }
     },
@@ -5886,20 +6014,20 @@
       }
     },
     {
-      "appid": 1605850,
-      "name": "ZeroSpace",
+      "appid": 1794680,
+      "name": "Vampire Survivors",
       "discount": 25,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1605850/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1605850/header.jpg",
-      "url": "https://store.steampowered.com/app/1605850/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1794680/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1794680/header.jpg",
+      "url": "https://store.steampowered.com/app/1794680/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 116200,
-          "original": 154933,
-          "final_formatted": "1162 ₽",
-          "original_formatted": "1549.33 ₽"
+          "final": 15000,
+          "original": 20000,
+          "final_formatted": "150 ₽",
+          "original_formatted": "200 ₽"
         }
       }
     },
@@ -5976,10 +6104,9 @@
         "ru": {
           "currency": "RUB",
           "final": 215900,
-          "original": 269900,
+          "original": 269875,
           "final_formatted": "2159 ₽",
-          "original_formatted": "2699 ₽",
-          "discount": 20
+          "original_formatted": "2698.75 ₽"
         }
       }
     },
@@ -6020,24 +6147,6 @@
       }
     },
     {
-      "appid": 431960,
-      "name": "Wallpaper Engine",
-      "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/431960/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/431960/header.jpg",
-      "url": "https://store.steampowered.com/app/431960/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 26300,
-          "original": 32875,
-          "final_formatted": "263 ₽",
-          "original_formatted": "328.75 ₽"
-        }
-      }
-    },
-    {
       "appid": 3124540,
       "name": "Far Far West",
       "discount": 20,
@@ -6056,20 +6165,20 @@
       }
     },
     {
-      "appid": 3812600,
-      "name": "ReStory: Chill Electronics Repairs",
+      "appid": 431960,
+      "name": "Wallpaper Engine",
       "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3812600/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3812600/header.jpg",
-      "url": "https://store.steampowered.com/app/3812600/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/431960/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/431960/header.jpg",
+      "url": "https://store.steampowered.com/app/431960/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 39900,
-          "original": 49875,
-          "final_formatted": "399 ₽",
-          "original_formatted": "498.75 ₽"
+          "final": 26300,
+          "original": 32875,
+          "final_formatted": "263 ₽",
+          "original_formatted": "328.75 ₽"
         }
       }
     },
@@ -6092,20 +6201,20 @@
       }
     },
     {
-      "appid": 2927200,
-      "name": "Mount &amp; Blade II: Bannerlord - War Sails",
+      "appid": 3812600,
+      "name": "ReStory: Chill Electronics Repairs",
       "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2927200/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2927200/header.jpg",
-      "url": "https://store.steampowered.com/app/2927200/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3812600/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3812600/header.jpg",
+      "url": "https://store.steampowered.com/app/3812600/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 127900,
-          "original": 159875,
-          "final_formatted": "1279 ₽",
-          "original_formatted": "1598.75 ₽"
+          "final": 39900,
+          "original": 49875,
+          "final_formatted": "399 ₽",
+          "original_formatted": "498.75 ₽"
         }
       }
     },
@@ -6128,6 +6237,24 @@
       }
     },
     {
+      "appid": 2927200,
+      "name": "Mount &amp; Blade II: Bannerlord - War Sails",
+      "discount": 20,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2927200/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2927200/header.jpg",
+      "url": "https://store.steampowered.com/app/2927200/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 127900,
+          "original": 159875,
+          "final_formatted": "1279 ₽",
+          "original_formatted": "1598.75 ₽"
+        }
+      }
+    },
+    {
       "appid": 427410,
       "name": "Abiotic Factor",
       "discount": 20,
@@ -6142,60 +6269,6 @@
           "original": 120000,
           "final_formatted": "960 ₽",
           "original_formatted": "1200 ₽"
-        }
-      }
-    },
-    {
-      "appid": 2456740,
-      "name": "inZOI",
-      "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2456740/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2456740/header.jpg",
-      "url": "https://store.steampowered.com/app/2456740/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 191900,
-          "original": 239875,
-          "final_formatted": "1919 ₽",
-          "original_formatted": "2398.75 ₽"
-        }
-      }
-    },
-    {
-      "appid": 2592160,
-      "name": "Dispatch",
-      "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2592160/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2592160/header.jpg",
-      "url": "https://store.steampowered.com/app/2592160/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 88000,
-          "original": 110000,
-          "final_formatted": "880 ₽",
-          "original_formatted": "1100 ₽"
-        }
-      }
-    },
-    {
-      "appid": 1913120,
-      "name": "Tears of Metal",
-      "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1913120/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1913120/header.jpg",
-      "url": "https://store.steampowered.com/app/1913120/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 84000,
-          "original": 105000,
-          "final_formatted": "840 ₽",
-          "original_formatted": "1050 ₽"
         }
       }
     },
@@ -6218,30 +6291,84 @@
       }
     },
     {
-      "appid": 3867170,
-      "name": "Sengoku Rance",
+      "appid": 2592160,
+      "name": "Dispatch",
       "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3867170/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3867170/header.jpg",
-      "url": "https://store.steampowered.com/app/3867170/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2592160/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2592160/header.jpg",
+      "url": "https://store.steampowered.com/app/2592160/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 52000,
-          "original": 65000,
-          "final_formatted": "520 ₽",
-          "original_formatted": "650 ₽"
+          "final": 88000,
+          "original": 110000,
+          "final_formatted": "880 ₽",
+          "original_formatted": "1100 ₽"
         }
       }
     },
     {
-      "appid": 3404260,
-      "name": "Dead as Disco",
+      "appid": 2456740,
+      "name": "inZOI",
       "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3404260/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3404260/header.jpg",
-      "url": "https://store.steampowered.com/app/3404260/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2456740/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2456740/header.jpg",
+      "url": "https://store.steampowered.com/app/2456740/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 191900,
+          "original": 239875,
+          "final_formatted": "1919 ₽",
+          "original_formatted": "2398.75 ₽"
+        }
+      }
+    },
+    {
+      "appid": 2863680,
+      "name": "ZERO PARADES: Director's Cut",
+      "discount": 20,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2863680/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2863680/header.jpg",
+      "url": "https://store.steampowered.com/app/2863680/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 119900,
+          "original": 149875,
+          "final_formatted": "1199 ₽",
+          "original_formatted": "1498.75 ₽"
+        }
+      }
+    },
+    {
+      "appid": 5053820,
+      "name": "Mimic Party",
+      "discount": 20,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5053820/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5053820/header.jpg",
+      "url": "https://store.steampowered.com/app/5053820/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 26800,
+          "original": 33500,
+          "final_formatted": "268 ₽",
+          "original_formatted": "335 ₽"
+        }
+      }
+    },
+    {
+      "appid": 1913120,
+      "name": "Tears of Metal",
+      "discount": 20,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1913120/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1913120/header.jpg",
+      "url": "https://store.steampowered.com/app/1913120/",
       "discount_expiration": null,
       "prices": {
         "ru": {
@@ -6268,6 +6395,24 @@
           "original": 84875,
           "final_formatted": "679 ₽",
           "original_formatted": "848.75 ₽"
+        }
+      }
+    },
+    {
+      "appid": 3404260,
+      "name": "Dead as Disco",
+      "discount": 20,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3404260/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3404260/header.jpg",
+      "url": "https://store.steampowered.com/app/3404260/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 84000,
+          "original": 105000,
+          "final_formatted": "840 ₽",
+          "original_formatted": "1050 ₽"
         }
       }
     },
@@ -6308,42 +6453,6 @@
       }
     },
     {
-      "appid": 3840050,
-      "name": "Cult of the Lamb: Woolhaven",
-      "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3840050/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3840050/header.jpg",
-      "url": "https://store.steampowered.com/app/3840050/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 49600,
-          "original": 62000,
-          "final_formatted": "496 ₽",
-          "original_formatted": "620 ₽"
-        }
-      }
-    },
-    {
-      "appid": 5053820,
-      "name": "Mimic Party",
-      "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5053820/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5053820/header.jpg",
-      "url": "https://store.steampowered.com/app/5053820/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 26800,
-          "original": 33500,
-          "final_formatted": "268 ₽",
-          "original_formatted": "335 ₽"
-        }
-      }
-    },
-    {
       "appid": 3180070,
       "name": "No, I'm not a Human",
       "discount": 20,
@@ -6362,38 +6471,38 @@
       }
     },
     {
-      "appid": 1067360,
-      "name": "Pax Autocratica",
+      "appid": 3840050,
+      "name": "Cult of the Lamb: Woolhaven",
       "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/header.jpg",
-      "url": "https://store.steampowered.com/app/1067360/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3840050/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3840050/header.jpg",
+      "url": "https://store.steampowered.com/app/3840050/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 104000,
-          "original": 130000,
-          "final_formatted": "1040 ₽",
-          "original_formatted": "1300 ₽"
+          "final": 49600,
+          "original": 62000,
+          "final_formatted": "496 ₽",
+          "original_formatted": "620 ₽"
         }
       }
     },
     {
-      "appid": 2863680,
-      "name": "ZERO PARADES: Director's Cut",
+      "appid": 3867170,
+      "name": "Sengoku Rance",
       "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2863680/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2863680/header.jpg",
-      "url": "https://store.steampowered.com/app/2863680/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3867170/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3867170/header.jpg",
+      "url": "https://store.steampowered.com/app/3867170/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 119900,
-          "original": 149875,
-          "final_formatted": "1199 ₽",
-          "original_formatted": "1498.75 ₽"
+          "final": 52000,
+          "original": 65000,
+          "final_formatted": "520 ₽",
+          "original_formatted": "650 ₽"
         }
       }
     },
@@ -6412,6 +6521,24 @@
           "original": 20000,
           "final_formatted": "160 ₽",
           "original_formatted": "200 ₽"
+        }
+      }
+    },
+    {
+      "appid": 4121170,
+      "name": "Fears to Fathom® - Scratch Creek",
+      "discount": 20,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4121170/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4121170/header.jpg",
+      "url": "https://store.steampowered.com/app/4121170/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 30800,
+          "original": 38500,
+          "final_formatted": "308 ₽",
+          "original_formatted": "385 ₽"
         }
       }
     },
@@ -6452,20 +6579,20 @@
       }
     },
     {
-      "appid": 2684630,
-      "name": "Endacopia",
+      "appid": 4285110,
+      "name": "Tunnel Escape Fates Entwined",
       "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2684630/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2684630/header.jpg",
-      "url": "https://store.steampowered.com/app/2684630/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4285110/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4285110/header.jpg",
+      "url": "https://store.steampowered.com/app/4285110/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 57852,
-          "original": 72315,
-          "final_formatted": "578.52 ₽",
-          "original_formatted": "723.15 ₽"
+          "final": 68400,
+          "original": 85500,
+          "final_formatted": "684 ₽",
+          "original_formatted": "855 ₽"
         }
       }
     },
@@ -6488,38 +6615,38 @@
       }
     },
     {
-      "appid": 4121170,
-      "name": "Fears to Fathom® - Scratch Creek",
+      "appid": 2684630,
+      "name": "Endacopia",
       "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4121170/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4121170/header.jpg",
-      "url": "https://store.steampowered.com/app/4121170/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2684630/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2684630/header.jpg",
+      "url": "https://store.steampowered.com/app/2684630/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 30800,
-          "original": 38500,
-          "final_formatted": "308 ₽",
-          "original_formatted": "385 ₽"
+          "final": 57852,
+          "original": 72315,
+          "final_formatted": "578.52 ₽",
+          "original_formatted": "723.15 ₽"
         }
       }
     },
     {
-      "appid": 4285110,
-      "name": "Tunnel Escape Fates Entwined",
+      "appid": 1592190,
+      "name": "BONELAB",
       "discount": 20,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4285110/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4285110/header.jpg",
-      "url": "https://store.steampowered.com/app/4285110/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1592190/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1592190/header.jpg",
+      "url": "https://store.steampowered.com/app/1592190/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 68400,
-          "original": 85500,
-          "final_formatted": "684 ₽",
-          "original_formatted": "855 ₽"
+          "final": 104000,
+          "original": 130000,
+          "final_formatted": "1040 ₽",
+          "original_formatted": "1300 ₽"
         }
       }
     },
@@ -6578,24 +6705,6 @@
       }
     },
     {
-      "appid": 2380740,
-      "name": "RimWorld - Anomaly",
-      "discount": 15,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2380740/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2380740/header.jpg",
-      "url": "https://store.steampowered.com/app/2380740/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 76500,
-          "original": 90000,
-          "final_formatted": "765 ₽",
-          "original_formatted": "900 ₽"
-        }
-      }
-    },
-    {
       "appid": 892970,
       "name": "Valheim",
       "discount": 10,
@@ -6632,42 +6741,6 @@
       }
     },
     {
-      "appid": 2067820,
-      "name": "RetroSpace",
-      "discount": 10,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2067820/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2067820/header.jpg",
-      "url": "https://store.steampowered.com/app/2067820/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 76900,
-          "original": 85444,
-          "final_formatted": "769 ₽",
-          "original_formatted": "854.44 ₽"
-        }
-      }
-    },
-    {
-      "appid": 4570720,
-      "name": "DragonSword : Awakening",
-      "discount": 10,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4570720/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4570720/header.jpg",
-      "url": "https://store.steampowered.com/app/4570720/",
-      "discount_expiration": null,
-      "prices": {
-        "ru": {
-          "currency": "RUB",
-          "final": 143100,
-          "original": 159000,
-          "final_formatted": "1431 ₽",
-          "original_formatted": "1590 ₽"
-        }
-      }
-    },
-    {
       "appid": 3041230,
       "name": "Windrose",
       "discount": 10,
@@ -6682,6 +6755,24 @@
           "original": 139889,
           "final_formatted": "1259 ₽",
           "original_formatted": "1398.89 ₽"
+        }
+      }
+    },
+    {
+      "appid": 2067820,
+      "name": "RetroSpace",
+      "discount": 10,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2067820/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2067820/header.jpg",
+      "url": "https://store.steampowered.com/app/2067820/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 76900,
+          "original": 85444,
+          "final_formatted": "769 ₽",
+          "original_formatted": "854.44 ₽"
         }
       }
     },
@@ -6704,20 +6795,20 @@
       }
     },
     {
-      "appid": 3022790,
-      "name": "RimWorld - Odyssey",
+      "appid": 4570720,
+      "name": "DragonSword : Awakening",
       "discount": 10,
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3022790/header.jpg",
-      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3022790/header.jpg",
-      "url": "https://store.steampowered.com/app/3022790/",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4570720/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4570720/header.jpg",
+      "url": "https://store.steampowered.com/app/4570720/",
       "discount_expiration": null,
       "prices": {
         "ru": {
           "currency": "RUB",
-          "final": 79200,
-          "original": 88000,
-          "final_formatted": "792 ₽",
-          "original_formatted": "880 ₽"
+          "final": 143100,
+          "original": 159000,
+          "final_formatted": "1431 ₽",
+          "original_formatted": "1590 ₽"
         }
       }
     },
@@ -6754,6 +6845,24 @@
           "original": 105000,
           "final_formatted": "945 ₽",
           "original_formatted": "1050 ₽"
+        }
+      }
+    },
+    {
+      "appid": 3022790,
+      "name": "RimWorld - Odyssey",
+      "discount": 10,
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3022790/header.jpg",
+      "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3022790/header.jpg",
+      "url": "https://store.steampowered.com/app/3022790/",
+      "discount_expiration": null,
+      "prices": {
+        "ru": {
+          "currency": "RUB",
+          "final": 79200,
+          "original": 88000,
+          "final_formatted": "792 ₽",
+          "original_formatted": "880 ₽"
         }
       }
     }
