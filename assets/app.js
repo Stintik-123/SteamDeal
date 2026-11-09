@@ -9,7 +9,7 @@
     maxPrice: Number(localStorage.getItem('sd_max') || 0),
     query: '',
     onlyPriced: localStorage.getItem('sd_priced') === '1',
-    onlyPopular: localStorage.getItem('sd_popular') !== '0',
+    onlyPopular: localStorage.getItem('sd_popular') === '1',
     onlyFree: localStorage.getItem('sd_free') === '1',
     hideUnknown: localStorage.getItem('sd_hide') === '1',
     pageSize: 36,
@@ -130,7 +130,14 @@
     return state.popular.has(Number(deal.appid));
   }
 
+  const DLC_RE = /(upgrade|upgrade pack|dlc|season ?pass|expansion|add-?on|bundle|soundtrack|artbook)/i;
+
+  function isDlc(deal) {
+    return DLC_RE.test(String(deal.name || ''));
+  }
+
   function isFree(deal) {
+    if (isDlc(deal)) return false;
     if ((deal.discount || 0) >= 100) return true;
     const p = priceFor(deal, state.region);
     return (
@@ -247,13 +254,11 @@
     }
 
     const media =
-      '<div class="tile-media">' +
+      '<div class="tile-media" data-name="' + esc(String(d.name || 'Steam').slice(0, 60)) + '">' +
       (img
         ? '<img src="' +
           esc(img) +
-          '" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/' +
-          d.appid +
-          '/capsule_616x353.jpg\'" />'
+          '" alt="" loading="lazy" decoding="async" onerror="window.__sdImg(this)" />'
         : '') +
       (canHover
         ? '<video muted loop playsinline preload="none" data-appid="' +
@@ -288,6 +293,16 @@
       '</div></a>'
     );
   }
+
+  window.__sdImg = (el) => {
+    const media = el.closest('.tile-media');
+    if (!el.dataset.retry) {
+      el.dataset.retry = '1';
+      const m = /apps\/(\d+)\//.exec(el.src || '');
+      if (m) { el.src = 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/' + m[1] + '/capsule_616x353.jpg'; return; }
+    }
+    if (media) media.classList.add('no-img');
+  };
 
   function bindTrailers(root) {
     if (!canHover || !root) return;
@@ -346,9 +361,6 @@
     els.freeRow.innerHTML = free
       .map((d, i) => cardHtml(d, i === 0 ? 'tile-lg' : 'tile-md', true))
       .join('');
-    els.freeRow.querySelectorAll('.tile').forEach((el) => {
-      el.style.gridColumn = 'span 1';
-    });
     bindTrailers(els.freeRow);
   }
 
@@ -380,9 +392,6 @@
           cardHtml(d, i === 0 ? 'tile-xl' : i === 1 ? 'tile-lg' : 'tile-md', true)
         )
         .join('');
-      els.topRow.querySelectorAll('.tile').forEach((el) => {
-        el.style.gridColumn = 'span 1';
-      });
       bindTrailers(els.topRow);
     }
 
@@ -441,7 +450,7 @@
     state.minDiscount = 30;
     state.maxPrice = 0;
     state.sort = 'discount';
-    state.onlyPopular = true;
+    state.onlyPopular = false;
     state.onlyPriced = false;
     state.onlyFree = false;
     state.hideUnknown = false;
@@ -450,7 +459,7 @@
     if (els.minDiscount) els.minDiscount.value = '30';
     if (els.maxPrice) els.maxPrice.value = '0';
     if (els.sort) els.sort.value = 'discount';
-    if (els.onlyPopular) els.onlyPopular.checked = true;
+    if (els.onlyPopular) els.onlyPopular.checked = false;
     if (els.onlyPriced) els.onlyPriced.checked = false;
     if (els.onlyFree) els.onlyFree.checked = false;
     if (els.hideUnknown) els.hideUnknown.checked = false;

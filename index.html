@@ -3,52 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="SteamDeal — газета скидок Steam. RU · KZ · UA · US." />
-  <meta name="theme-color" content="#111111" />
-  <title>SteamDeal — газета скидок</title>
+  <meta name="description" content="SteamDeal — витрина скидок Steam. Цены в RU, KZ, UA и US. Не магазин, только ссылки." />
+  <meta name="theme-color" content="#0b0f14" />
+  <title>SteamDeal — скидки Steam в одном месте</title>
   <link rel="preconnect" href="https://shared.akamai.steamstatic.com" />
   <link rel="preconnect" href="https://cdn.akamai.steamstatic.com" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <div class="paper">
-    <header class="masthead">
-      <div class="mast-top">
-        <span class="edition" id="edition">вып. specials</span>
-        <span class="mast-date" id="updated">—</span>
-        <span class="mast-count" id="count">—</span>
-        <div class="mast-actions">
-          <button type="button" class="theme-btn" id="themeBtn" title="Светлая / тёмная">тема</button>
-          <a class="gh-btn" href="https://github.com/Stintik-123/SteamDeal" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-      <div class="mast-title-row">
-        <a class="logo-mark" href="./" aria-label="SteamDeal">
-          <img src="Image%20(11)%20(4).png" alt="" width="48" height="48" />
-        </a>
-        <div class="mast-titles">
-          <h1 class="wordmark">STEAMDEAL</h1>
-          <p class="tagline">газета скидок · не магазин · только ссылки в Steam</p>
-        </div>
-      </div>
-      <div class="rule thick"></div>
-      <div class="rule thin"></div>
-    </header>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./" aria-label="SteamDeal">
+        <img class="brand-logo" id="logoImg" src="assets/logo.png" alt="" width="34" height="34" />
+        <span class="brand-text">
+          <strong>SteamDeal</strong>
+          <span class="brand-sub">скидки Steam · не магазин</span>
+        </span>
+      </a>
 
-    <section class="classifieds" id="filters" aria-label="Фильтры">
-      <div class="class-head">
-        <span class="class-label">объявления · фильтры</span>
-        <button type="button" class="linkish" id="resetFilters">сбросить всё</button>
+      <div class="topbar-meta">
+        <span class="meta-item" id="updated">—</span>
+        <span class="meta-dot"></span>
+        <span class="meta-item" id="count">—</span>
+        <span class="badge-edition" id="edition">specials</span>
       </div>
 
-      <div class="filter-grid">
-        <label class="fg search-wide">
-          <span>поиск</span>
+      <div class="topbar-actions">
+        <button type="button" class="icon-btn" id="themeBtn" title="Светлая / тёмная тема" aria-label="Переключить тему">
+          <span class="theme-glyph"></span>
+        </button>
+        <a class="gh-link" href="https://github.com/Stintik-123/SteamDeal" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls" aria-label="Фильтры">
+      <div class="controls-row">
+        <label class="field field-search">
+          <span class="field-label">поиск</span>
           <input id="search" type="search" placeholder="название игры…" autocomplete="off" />
         </label>
 
-        <label class="fg">
-          <span>регион</span>
+        <label class="field">
+          <span class="field-label">регион</span>
           <select id="region">
             <option value="ru">Россия ₽</option>
             <option value="kz">Казахстан ₸</option>
@@ -57,8 +55,8 @@
           </select>
         </label>
 
-        <label class="fg">
-          <span>сортировка</span>
+        <label class="field">
+          <span class="field-label">сортировка</span>
           <select id="sort">
             <option value="discount">скидка %</option>
             <option value="price">цена ↑</option>
@@ -67,8 +65,8 @@
           </select>
         </label>
 
-        <label class="fg">
-          <span>мин. скидка</span>
+        <label class="field">
+          <span class="field-label">мин. скидка</span>
           <select id="minDiscount">
             <option value="0">любая</option>
             <option value="20">от 20%</option>
@@ -79,8 +77,8 @@
           </select>
         </label>
 
-        <label class="fg">
-          <span>макс. цена</span>
+        <label class="field">
+          <span class="field-label">макс. цена</span>
           <select id="maxPrice">
             <option value="0">без лимита</option>
             <option value="100">до 100</option>
@@ -91,9 +89,11 @@
             <option value="2000">до 2000</option>
           </select>
         </label>
+
+        <button type="button" class="reset-btn" id="resetFilters">сбросить</button>
       </div>
 
-      <div class="chip-rows">
+      <div class="chips">
         <div class="chip-row" id="discChips" data-kind="discount">
           <button type="button" class="chip" data-min="0">все %</button>
           <button type="button" class="chip on" data-min="30">−30</button>
@@ -109,7 +109,7 @@
           <button type="button" class="chip" data-max="1000">≤1000</button>
         </div>
         <div class="chip-row toggles">
-          <label class="tog"><input type="checkbox" id="onlyPopular" checked /> известные / жирные</label>
+          <label class="tog"><input type="checkbox" id="onlyPopular" /> только известные</label>
           <label class="tog"><input type="checkbox" id="onlyPriced" /> есть цена в регионе</label>
           <label class="tog"><input type="checkbox" id="onlyFree" /> только бесплатные</label>
           <label class="tog"><input type="checkbox" id="hideUnknown" /> скрыть без цены</label>
@@ -117,46 +117,47 @@
       </div>
     </section>
 
-    <div class="rule thin"></div>
-
-    <section class="lead" id="topSection">
-      <h2 class="sec-head"><span>первая полоса</span> · топ скидок</h2>
-      <div id="topRow" class="mosaic lead-mosaic"></div>
+    <section class="section" id="topSection">
+      <div class="section-head">
+        <h2>Главное сейчас</h2>
+        <span class="section-note">максимальные скидки дня</span>
+      </div>
+      <div id="topRow" class="grid grid-hero"></div>
     </section>
 
-    <section class="lead free-sec" id="freeBlock" hidden>
-      <h2 class="sec-head"><span>раздача</span> · бесплатно сейчас</h2>
-      <div id="freeRow" class="mosaic lead-mosaic"></div>
+    <section class="section" id="freeBlock" hidden>
+      <div class="section-head">
+        <h2>Бесплатно</h2>
+        <span class="section-note">забрать можно сейчас</span>
+      </div>
+      <div id="freeRow" class="grid grid-hero"></div>
     </section>
 
-    <div class="rule thick"></div>
-
-    <section class="main-sec">
-      <div class="sec-head-row">
-        <h2 class="sec-head"><span>каталог</span> · все скидки</h2>
+    <section class="section">
+      <div class="section-head">
+        <h2>Все скидки</h2>
         <p class="status-line" id="status" hidden></p>
       </div>
-      <div id="grid" class="mosaic catalog"></div>
+      <div id="grid" class="grid"></div>
       <div class="more-wrap">
-        <button type="button" id="moreBtn" class="more-btn" hidden>ещё из архива</button>
+        <button type="button" id="moreBtn" class="more-btn" hidden>ещё</button>
       </div>
     </section>
+  </main>
 
-    <div class="rule thin"></div>
-
-    <footer class="colophon">
+  <footer class="footer">
+    <div class="footer-inner">
       <p>
-        <strong>SteamDeal</strong> — неофициальная витрина.
-        Цены ориентировочные. Источник: публичные данные Steam Store.
+        <strong>SteamDeal</strong> — неофициальная витрина скидок. Цены ориентировочные,
+        источник — публичные данные Steam Store.
       </p>
-      <p>
+      <p class="footer-links">
         <a href="https://github.com/Stintik-123/SteamDeal" target="_blank" rel="noopener">GitHub</a>
-        ·
         <a href="https://store.steampowered.com/search/?specials=1" target="_blank" rel="noopener">Steam Specials</a>
-        · Stintik
+        <span>Stintik</span>
       </p>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   <script src="assets/app.js" defer></script>
 </body>
