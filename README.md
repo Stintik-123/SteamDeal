@@ -14,6 +14,8 @@
 
 SteamDeal показывает реальные скидки из Steam без визуального шума: чёрно-белый дизайн, крупные обложки и цены, которые видны сразу — до перехода в магазин.
 
+![Витрина SteamDeal](assets/screenshot.png)
+
 **[Открыть витрину → stintik-123.github.io/SteamDeal](https://stintik-123.github.io/SteamDeal/)**
 
 ## Что внутри
